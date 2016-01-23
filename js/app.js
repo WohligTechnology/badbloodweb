@@ -30,6 +30,7 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     link: function($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
+      $('#Containers').mixItUp( );
       $element.css("min-height", windowHeight);
       setTimeout(function() {
         $element.css("min-height", windowHeight);

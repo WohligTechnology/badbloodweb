@@ -13,6 +13,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'img/main_bg3.jpg'
 
   ];
+  $scope.gallery = [{
+    img: "img/gallery1.jpg"
+  }, {
+    img: "img/gallery2.jpg"
+  }, {
+    img: "img/gallery3.jpg"
+  }, {
+    img: "img/gallery4.jpg"
+  }, {
+    img: "img/gallery1.jpg"
+  }, {
+    img: "img/gallery2.jpg"
+  }, {
+    img: "img/gallery3.jpg"
+  }, {
+    img: "img/gallery4.jpg"
+  }, {
+    img: "img/gallery1.jpg"
+  }];
+  $scope.gallerys = [{
+    img: "img/gallery1.jpg"
+  }, {
+    img: "img/gallery2.jpg"
+  }, {
+    img: "img/gallery3.jpg"
+  }, {
+    img: "img/gallery4.jpg"
+  }];
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
