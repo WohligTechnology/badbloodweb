@@ -17,10 +17,30 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         url: "/home",
         templateUrl: "views/template.html",
         controller: 'HomeCtrl'
+    })
+    .state('donate', {
+        url: "/donate",
+        templateUrl: "views/template.html",
+        controller: 'DonateCtrl'
+    })
+    .state('rti', {
+        url: "/rti",
+        templateUrl: "views/template.html",
+        controller: 'RtiCtrl'
     });
 
     $urlRouterProvider.otherwise("/home");
 
+});
+
+firstapp.directive('container', function() {
+  return {
+    restrict: 'C',
+    replace: false,
+    link: function($scope, element, attrs) {
+$('#Container').mixItUp();
+    }
+  };
 });
 
 firstapp.directive('autoHeight', function($compile, $parse) {
@@ -30,7 +50,7 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     link: function($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
-      $('#Containers').mixItUp( );
+
       $element.css("min-height", windowHeight);
       setTimeout(function() {
         $element.css("min-height", windowHeight);

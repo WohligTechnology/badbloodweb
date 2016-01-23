@@ -7,33 +7,7 @@
     </flex-slider>
   </div>
   <section>
-    <section class="grey-section" auto-height>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="event">
-              <h1>
-              Event
-            </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.
-              </p>
-              <p>
-                Integer vitae condimentum dolor, et consectetur neque. In eget ornare lacu consectetur
-              </p>
-              <p>
-                Nullam leo orci, rhoncus non est quis, tristique fermentum orci.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="event-img">
-              <img src="img/event.jpg" class="img-responsive">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <section>
       <div class="container">
         <div class="row">
@@ -108,6 +82,33 @@
         </div>
       </div>
     </section>
+    <section class="grey-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="event">
+              <h1>
+              Event
+            </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.
+              </p>
+              <p>
+                Integer vitae condimentum dolor, et consectetur neque. In eget ornare lacu consectetur
+              </p>
+              <p>
+                Nullam leo orci, rhoncus non est quis, tristique fermentum orci.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="event-img">
+              <img src="img/event.jpg" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section auto-height>
       <div class="container">
         <div class="row">
@@ -116,24 +117,55 @@
               <h1 class="block-title">Our <span>Gallery</span></h1>
             </div>
           </div>
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <div class="gallery-filter pull-right">
               <!-- <a class="filter" data-filter=".category-1">Africa</a> -->
-              <a class="filter" data-filter=".category-2 ">Indonesia</a>
-              <a class="filter" data-filter=".category-1">Syria</a>
+              <a class="filter all" data-filter="all">Indonesia</a>
+              <a class="filter " data-filter=".category-1">Syria</a>
               <a class="filter" data-filter=".category-2 "><i class="fa fa-picture-o"></i></a>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
-      <div id="Containers" class="container">
+      <div class="container">
         <div class="row">
-          <div class="col-md-4" ng-repeat="data in gallery track by $index">
-            <img ng-src="{{data.img}}" class="img-responsive mix category-1">
+          <div class="col-md-3"  data-my-order="1" ng-repeat="data in gallery track by $index">
+            <img ng-src="{{data.img}}" class="img-responsive ">
           </div>
-          <div class="col-md-4" ng-repeat="data in gallerys track by $index">
-            <img ng-src="{{data.img}}" class="img-responsive mix category-2">
+          <!-- <div class="col-md-4 mix category-2" data-my-order="2" ng-repeat="data in gallerys track by $index">
+            <img ng-src="{{data.image}}" class="img-responsive ">
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="sponser">
+              <h1>Our Sponser</h1>
+
+              <div class="horizontal-carousel">
+                <ul class="slides">
+                  <li class="brand">
+                    <img src="img/partner1.png" alt="" />
+                  </li>
+                  <li class="brand">
+                    <img src="img/partner2.png" alt="" />
+                  </li>
+                  <li class="brand">
+                    <img src="img/partner3.png" alt="" />
+                  </li>
+                  <li class="brand">
+                    <img src="img/partner4.png" alt="" />
+                  </li>
+                  <li class="brand">
+                    <img src="img/partner5.png" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
