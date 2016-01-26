@@ -23,6 +23,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'DonateCtrl'
     })
+    .state('gallery', {
+        url: "/gallery",
+        templateUrl: "views/template.html",
+        controller: 'GalleryCtrl'
+    })
     .state('rti', {
         url: "/rti",
         templateUrl: "views/template.html",

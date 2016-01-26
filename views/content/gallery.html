@@ -1,0 +1,19 @@
+<section auto-height>
+  <div class="rti-banner">
+    <img src="img/gall.jpg" class="img-responsive">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="gall-det">
+          <h1>Our Gallery</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3" ng-repeat="data in gallery track by $index">
+          <img ng-src="{{data.img}}" class="img-responsive ">
+      </div>
+    </div>
+  </div>
+</section>

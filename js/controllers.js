@@ -50,6 +50,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('GalleryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("gallery");
+  $scope.menutitle = NavigationService.makeactive("Gallery");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.gallery = [{
+    img: "img/gallery1.jpg"
+  }, {
+    img: "img/gallery2.jpg"
+  }, {
+    img: "img/gallery3.jpg"
+  }, {
+    img: "img/gallery4.jpg"
+  }, {
+    img: "img/gallery1.jpg"
+  }, {
+    img: "img/gallery2.jpg"
+  }, {
+    img: "img/gallery3.jpg"
+  }, {
+    img: "img/gallery4.jpg"
+  }, {
+    img: "img/gallery1.jpg"
+  }];
+
+})
 .controller('DonateCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("donate");
