@@ -6,7 +6,7 @@
       </li>
     </flex-slider>
   </div>
-  <section>
+</section>
 
     <section>
       <div class="container">
@@ -106,6 +106,47 @@
               <img src="img/event.jpg" class="img-responsive">
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="act-head">
+            <h1>Activities</h1>
+          <a href="#" class="view-all pull-right"><i class="fa fa-plus-circle"></i>View All</a>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6" ng-repeat="data in activity">
+            <div class="project-box">
+<div class="row">
+  <div class="col-md-6">
+    <div class="project-photo">
+      <div class="project-photo-w">
+        <img class="" ng-src="{{data.image}}" alt="" />
+      </div>
+
+    </div>
+
+  </div>
+  <div class="col-md-6">
+    <div class="project-info">
+      <h3>{{data.title}}</h3>
+      <div class="project-info-t">
+    {{data.desc}}
+      </div>
+      <div class="project-info-f">
+       Donation <span class="text-gray">$78,845 / $126,500</span>
+      <span class="gray-bar"><span class="yellow-bar" data-value="70"></span></span>
+      </div>
+    </div>
+    <span class="clearfix"></span>
+  </div>
+</div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

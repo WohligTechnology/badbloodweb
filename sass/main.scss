@@ -6,8 +6,8 @@
 
 /* Bootstrap Variables Goes Here */
 
-$brand-primary: #0d9dff !default;
-$brand-success: #84ce3c !default;
+$brand-primary: #e31e24 !default;
+$brand-success: #F6F6F6 !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
@@ -65,5 +65,36 @@ img.doneLoading {
 }
 nav li:hover .dropdown-menu {
   display: block;
+}
+.flexslider {
+  border: none;
+  overflow: hidden;
+  .flex-direction-nav {
+    a {
+      height: 45px;
+      color: $brand-primary;
+      text-shadow: none;
+      &:before {
+        font-size: 40px;
+        color: $brand-primary;
+        text-shadow: none;
+        font-family: 'FontAwesome';
+      }
+    }
+    .flex-prev {
+      left: 20px !important;
+      opacity: 1 !important;
+      &:before {
+        content: '\f053';
+      }
+    }
+    .flex-next {
+      right: 20px !important;
+      opacity: 1 !important;
+      &:before {
+        content: '\f054';
+      }
+    }
+  }
 }
 /* Start writing sass here */

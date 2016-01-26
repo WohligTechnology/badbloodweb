@@ -41,6 +41,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   }, {
     image: "img/gallery4.jpg"
   }];
+  $scope.activity = [{
+    image: "img/project1.jpg",
+    title:"Help girls to get water",
+    desc:"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+  }, {
+    image: "img/project1.jpg",
+    title:"Help girls to get water",
+    desc:"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+  },{
+    image: "img/project1.jpg",
+    title:"Help girls to get water",
+    desc:"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+  },{
+    image: "img/project1.jpg",
+    title:"Help girls to get water",
+    desc:"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+  }];
+
 })
 .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
@@ -48,6 +66,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Rti");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+})
+.controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("about");
+  $scope.menutitle = NavigationService.makeactive("About");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
+.controller('ActivityCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("activity");
+  $scope.menutitle = NavigationService.makeactive("Activity");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.mySlides = [
+    'img/main_bg.jpg',
+    'img/main_bg2.jpg',
+    'img/main_bg3.jpg'
+
+  ];
+
 
 })
 .controller('GalleryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
