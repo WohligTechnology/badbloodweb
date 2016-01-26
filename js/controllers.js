@@ -67,6 +67,41 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
+
+      $scope.accordian = [];
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+      $scope.accordian.push({
+          isFirstOpen: true,
+          isFirstDisabled: false
+      });
+
 })
 .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
