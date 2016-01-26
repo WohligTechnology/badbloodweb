@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Lato:400,700,300);;
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -11,6 +12,10 @@ $brand-success: #F6F6F6 !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
+$white: #fff !default;
+
+$font-family-sans-serif: "Lato", "Roboto Slab","Voyage Fantastique","Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Lato", "Roboto Slab", "Voyage Fantastique ","Advent Pro", Georgia, "Times New Roman", Times, serif !default;
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -48,7 +53,19 @@ $brand-info: #000072 !default;
     display: none;
 }
 body {
-  padding-top: 70px;
+    font-family: $font-family-sans-serif;
+    font-size: 15px;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    outline: 0;
+  }
+  &:focus{
+    text-decoration: none;
+    outline: 0;
+  }
 }
 img.loading {
   text-align: center;
@@ -97,4 +114,178 @@ nav li:hover .dropdown-menu {
     }
   }
 }
+.margin0{
+  margin: 0px;
+}
+.padding0{
+  padding: 0px;
+}
+.custom-li{
+ul{
+  list-style: none;
+  display: block;
+
+  li{
+    display: inline-block;
+  }
+}
+}
+.primary-color{
+  color:$brand-primary;
+}
+.secondary-color{
+  color:$brand-success;
+}
+.display-inline{
+  display: inline-block;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto Slab', sans-serif;
+}
 /* Start writing sass here */
+
+.header-upbar {
+    background: #2E303C;
+    color: #fff;
+    .container{
+          border-bottom: 2px solid #393B47;
+    }
+}
+.telephone {
+    font-family: 'Roboto Slab', sans-serif;
+    line-height: 53px;
+}
+.social-top {
+  span {
+
+      .fa {
+    padding-right: 10px;
+}
+  }
+}
+.social-icons{
+      padding-left: 20px;
+  a{
+    color: $white;
+    line-height: 53px;
+    display: inline-block;
+    width: 51px;
+    text-align: center;
+@include transition(all .1s ease-in-out );
+    &:hover{
+          background: $brand-primary;
+    }
+}
+
+}
+#header {
+    background: #2E303C;
+    font-family: 'Roboto Slab', sans-serif;
+        border-color: #2E303C;
+}
+.logo {
+    height: 110px;
+    overflow: hidden;
+    display: block;
+        padding: 5px 0px;
+    img{
+      max-height: 100%;
+      max-width: 100%;
+    }
+}
+.navbar-default .navbar-nav > li > a {
+    color: $white;
+    @include transition(all .1s ease-in-out );
+    padding-top: 10px;
+padding-bottom: 10px;
+    &:hover{
+      color:$brand-primary;
+    }
+}
+.nav-top{
+      padding-top: 30px;
+}
+.btn-donate{
+  border: 1px solid $brand-primary;
+  @include transition(all .1s ease-in-out );
+  &:hover{
+    a{
+      background: $brand-primary !important;
+      color:$white !important;
+    }
+  }
+}
+.slider {
+    margin-top: 83px;
+}
+.block-title {
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 28px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.fact-li{
+      padding-left: 16px;
+  li{
+    line-height: 150%;
+font-size: 15px;
+text-transform: capitalize;
+  }
+}
+.pt20{
+  padding-top: 50px;
+}
+.icon {
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    img{
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+}
+.fact-number {
+    font-size: 76px;
+    line-height: 1;
+    font-family: 'roboto slab';
+    font-weight: 100;
+    padding-bottom: 20px;
+  display: block;
+  padding-top: 20px;
+}
+.bright{
+    border-right: 2px solid #F0F0F0;
+}
+.gray-section {
+    background: $brand-success;
+}
+#bg1 {
+    background-image: url(/img/bg1.jpg);
+}
+.black-bg{
+  background: #333;
+color: #fff;
+position: static;
+background-attachment: fixed;
+}
+.section_i {
+    position: relative;
+    &:before{
+      content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+background: rgba(32, 32, 32, 0.8);
+    }
+}
+.pos-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.pt70{
+      padding-top: 70px;
+}

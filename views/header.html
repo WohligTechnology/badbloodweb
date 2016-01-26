@@ -1,32 +1,45 @@
 <header>
-   <nav class="navbar navbar-default navbar-fixed-top">
+   <nav class="navbar navbar-default navbar-fixed-top" id="header">
      <div class="header-upbar">
        <div class="container">
-         <div class="telephone pull-left">8 0938 <strong>521248</strong></div>
+         <div class="col-md-12">
+         <div class="telephone pull-left">+91 8 0938 <strong>521248</strong></div>
          <div class="social-top pull-right">
-           <span><i class="fa fa-envelope"></i> generosity@gmail.com </span>
-           <div class="social-icons">
+           <span><i class="fa fa-envelope"></i> info@thetmm.com </span>
+           <div class="social-icons display-inline">
              <a href="#"><i class="fa fa-twitter"></i></a>
              <a href="#"><i class="fa fa-facebook"></i></a>
              <a href="#"><i class="fa fa-youtube"></i></a>
            </div>
          </div>
+         </div>
        </div>
      </div>
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/home"><img src="img/logo.png" alt="logo" width="20"> </a>
-        </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <div class="logo">
+                  <a class="" href="#/home"><img src="img/logo.png" alt="logo" class="img-responsive"> </a>
+              </div>
 
-        <div class="collapse navbar-collapse" id="nav-collapse">
-               <div ng-include="template.menu" class="template menu"></div>
+          </div>
         </div>
+        <div class="col-md-9">
+          <div class="collapse navbar-collapse" id="nav-collapse">
+                 <div ng-include="template.menu" class="template menu"></div>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
 </nav>
 </header>
