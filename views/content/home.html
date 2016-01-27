@@ -115,10 +115,10 @@
       </div>
       </div>
     </section>
-    <section>
+    <section class="gray-section">
       <div class="container">
-        <div class="act-head pt20">
-            <h1 class="block-title">Activities</h1>
+        <div class="act-head pt20 block-title">
+            <h1 class="display-inline">Activities</h1>
           <a href="#" class="view-all pull-right"><i class="fa fa-plus-circle"></i>View All</a>
         </div>
 
@@ -129,7 +129,7 @@
   <div class="col-md-6">
     <div class="project-photo">
       <div class="project-photo-w">
-        <img class="" ng-src="{{data.image}}" alt="" />
+        <img class="" ng-src="{{data.image}}" alt="" class="img-responsive"/>
       </div>
 
     </div>
@@ -142,8 +142,7 @@
     {{data.desc}}
       </div>
       <div class="project-info-f">
-       Donation <span class="text-gray">$78,845 / $126,500</span>
-      <span class="gray-bar"><span class="yellow-bar" data-value="70"></span></span>
+  <button class="btn btn-primary">Read More</button>
       </div>
     </div>
     <span class="clearfix"></span>
@@ -157,9 +156,10 @@
       </div>
     </section>
     <section auto-height>
+        <div class="pt100">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="gal">
               <h1 class="block-title">Our <span>Gallery</span></h1>
             </div>
@@ -171,22 +171,34 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3"  data-my-order="1" ng-repeat="data in gallery track by $index">
-            <img ng-src="{{data.img}}" class="img-responsive ">
+            <div class="item-wrapper">
+            <div class="mb15">
+                <img ng-src="{{data.img}}" class="img-responsive ">
+                <div class="item-overlay">
+                  <h3>tristique massa </h3>
+                  <span class="info">Don not stay on the sidenes, help us, please contact us!</span>
+
+                </div>
+            </div>
+</div>
           </div>
           <!-- <div class="col-md-4 mix category-2" data-my-order="2" ng-repeat="data in gallerys track by $index">
             <img ng-src="{{data.image}}" class="img-responsive ">
           </div> -->
         </div>
       </div>
+    </div>
     </section>
-    <section>
+    <section id="bg1" class="black-bg">
+      <div class="section_i">
+        <div class="padall">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="sponser">
-              <h1>Our Sponser</h1>
+              <h1 class="block-title">Our Sponser</h1>
 
-              <div class="horizontal-carousel">
+              <div class="horizontal-carousel custom-li">
                 <ul class="slides">
                   <li class="brand">
                     <img src="img/partner1.png" alt="" />
@@ -209,9 +221,12 @@
           </div>
         </div>
       </div>
+      </div>
+      </div>
     </section>
     <section auto-height>
       <div class="container">
+        <div class="pt100">
         <div class="row">
           <div class="col-md-6">
             <div class="contact">
@@ -271,6 +286,7 @@
               </form>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

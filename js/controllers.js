@@ -13,6 +13,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'img/main_bg3.jpg'
 
   ];
+  $scope.mySlide = [
+    'img/partner1.png',
+    'img/partner2.png',
+    'img/partner3.png',
+    'img/partner4.png',
+    'img/partner5.png',
+    'img/partner6.png'
+
+  ];
   $scope.gallery = [{
     img: "img/gallery1.jpg"
   }, {
