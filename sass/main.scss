@@ -369,3 +369,18 @@ li.brand {
 .padall{
   padding: 70px 0px;
 }
+.text-field {
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    .fa{
+      position: absolute;
+    color: #E3E3E3;
+    right: 16px;
+    top: 16px;
+    z-index: 1;
+    font-size: 17px;
+    }
+}
