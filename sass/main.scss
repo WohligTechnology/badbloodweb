@@ -506,6 +506,24 @@ a.white-link {
     }
   }
 }
+.mt50{
+  margin-top: 50px;
+}
 .sect-min{
   min-height: 550px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.donate-form{
+  margin-top: 20px;
+  input{
+    height: 42px;
+  }
+}
+.mb30{
+      margin-bottom: 30px;
 }
