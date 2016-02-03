@@ -482,3 +482,30 @@ a.white-link {
     margin-bottom: 25px;
         margin-top: 50px;
 }
+.navigate{
+  margin: 40px auto;
+  ul{
+    padding: 0px;
+    li{
+      padding: 0px 12px;
+
+      a{
+        font-size: 16px;
+
+      }
+      .active{
+        color:#000;
+        &:before{
+          content: '\f054';
+          font-family: 'FontAwesome';
+          color: $brand-primary;
+          padding-right: 13px;
+        }
+      }
+
+    }
+  }
+}
+.sect-min{
+  min-height: 550px;
+}
