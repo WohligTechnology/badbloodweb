@@ -3,6 +3,8 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "../bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 
 /* Bootstrap Variables Goes Here */
@@ -526,4 +528,13 @@ label {
 }
 .mb30{
       margin-bottom: 30px;
+}
+.mt83{
+  margin-top: 83px;
+}
+img.fancybox-image {
+  opacity: 1;
+}
+#fancybox-thumbs.bottom img {
+  opacity: 1;
 }

@@ -73,7 +73,37 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     }
   };
 });
+firstapp.directive('fancyboxThumb', function() {
+    return {
+        restrict: 'C',
+        replace: false,
+        link: function($scope, element, attrs) {
+            $('.fancybox-thumb').fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+                helpers: {
+                    title: {
+                        type: 'outside'
+                    },
+                    thumbs: {
+                        width: 70,
+                        height: 70
+                    }
+                }
+            });
 
+        }
+    };
+});
+firstapp.filter('thumbimage', function() {
+    return function(input) {
+        if (input) {
+            return mainurl + 'image/index?name=' +input+ '&width=400';
+        } else {
+            return "";
+        }
+    };
+});
 firstapp.directive('img', function($compile, $parse) {
     return {
         restrict: 'E',

@@ -1,5 +1,8 @@
 var jsArray = [
   './bower_components/jquery/dist/jquery.min.js',
+  './bower_components/fancyBox/source/jquery.fancybox.js',
+'./bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.js',
+'./bower_components/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js',
   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
   './bower_components/flexslider/jquery.flexslider-min.js',
   './bower_components/angular/angular.min.js',

@@ -5,14 +5,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="gall-det">
-          <h1>Our Gallery</h1>
+        <div class="gall-det mt50">
+          <h1 class="block-title">Our Gallery</h1>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3" ng-repeat="data in gallery track by $index">
+        <div class="mb15">
+              <a class="fancybox-thumb" rel="fancybox-thumb" href="{{data.img}}" >
           <img ng-src="{{data.img}}" class="img-responsive ">
+        </a>
+          </div>
       </div>
     </div>
   </div>
