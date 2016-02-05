@@ -541,3 +541,28 @@ img.fancybox-image {
 #fancybox-thumbs.bottom img {
   opacity: 1;
 }
+.panel {
+    margin-bottom: 20px !important;
+}
+.panel-heading {
+    padding: 20px 15px;
+}
+.rti-mov{
+  ul{
+    padding: 0;
+    list-style: none;
+    li{
+      padding:5px 0px;
+    }
+  }
+}
+.org-detail {
+    margin-top: 40px;
+    p{
+          line-height: 90%;
+    }
+
+}
+.mt20{
+  margin-top: 20px;
+}
