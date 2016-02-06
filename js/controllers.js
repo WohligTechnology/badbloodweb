@@ -1,6 +1,8 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider','duScroll'])
+.value('duScrollOffset', 100)
+.value('duScrollDuration', 1400)
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout,$document) {
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
