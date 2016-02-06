@@ -1,5 +1,8 @@
 @media (max-width:1200px) {
-
+//activity
+.activity-info h4{
+  margin-top: -7px;
+}
 }
 @media (max-width: $screen-sm-max) {
   //header
@@ -28,9 +31,22 @@
 }
 }
 @media (max-width: $screen-xs-max) {
+   //header
+   .navbar-toggle {
+        margin-top: 34px;
+    }
+    .logo img {
+      margin: inherit;
+    }
    //about
   .mt50 {
     padding: 0px 10px;
+  }
+  //footer
+  .copyright {
+    padding: 0px 0;
+    text-align: center;
+    float: none !important;
   }
 }
 @media (max-width: 480px) {
