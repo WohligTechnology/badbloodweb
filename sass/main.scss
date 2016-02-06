@@ -117,7 +117,7 @@ nav li:hover .dropdown-menu {
     }
   }
 }
-.margin0{
+.margin0 {
   margin: 0px;
 }
 .padding0{
@@ -563,6 +563,11 @@ img.fancybox-image {
     }
 
 }
+.abt{
+p{
+text-align: justify;
+}
+}
 .mt20{
   margin-top: 20px;
   margin-bottom: 30px;
@@ -581,3 +586,5 @@ img.fancybox-image {
 .mt212{
   display:block;
 }
+
+@import "mobile_raj";
