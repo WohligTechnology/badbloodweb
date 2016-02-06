@@ -5,6 +5,14 @@
 }
 }
 @media (max-width: $screen-sm-max) {
+  //home
+  .slider {
+    margin-top: 125px;
+  }  
+  //activity
+  .activity-info h4{
+    margin-top: 18px;
+  }
   //header
   .navbar-header {
   float: none;
@@ -31,6 +39,7 @@
 }
 }
 @media (max-width: $screen-xs-max) {
+
    //header
    .navbar-toggle {
         margin-top: 34px;
@@ -50,6 +59,10 @@
   }
 }
 @media (max-width: 480px) {
+    //activity
+    .activity-info p {
+        font-size: 14px;
+    }
     //about
   .block-title {
       font-size: 26px;
