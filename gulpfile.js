@@ -11,6 +11,7 @@ var jsArray = [
   './bower_components/angular-bootstrap/ui-bootstrap.min.js',
   '.https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.js',
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+  './bower_components/angular-scroll/angular-scroll.min.js',
   './bower_components/ui-router/release/angular-ui-router.min.js',
   './bower_components/angular-flexslider/angular-flexslider.js',
   './js/jquery.mixitup.min.js',
