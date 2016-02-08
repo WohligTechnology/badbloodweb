@@ -1,4 +1,5 @@
 @media (max-width:1200px) {
+
 //activity
 .activity-info h4{
   margin-top: -7px;
@@ -6,9 +7,21 @@
 }
 @media (max-width: $screen-sm-max) {
   //home
+  .pt100{
+    padding-top: 70px;
+  }
+  img .mar1{
+    margin-top: 22px;
+  }
+  .fact-title .desc .lead {
+      font-size: 14px;
+  }
+  .fact-title .num .fact-number{
+      font-size: 46px;
+  }
   .slider {
     margin-top: 125px;
-  }  
+  }
   //activity
   .activity-info h4{
     margin-top: 18px;
