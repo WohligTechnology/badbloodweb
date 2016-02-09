@@ -1,93 +1,446 @@
 @media (max-width:1200px) {
-
-//activity
-.activity-info h4{
-  margin-top: -7px;
-}
-}
-@media (max-width: $screen-sm-max) {
+  // //home
+  // .sponser{
+  //   margin-top: -28px;
+  // }
+  // .project-info h3 {
+  //     padding-bottom: 12px;
+  //     margin-bottom: 15px;
+  //     margin-top: 17px;
+  //     padding-left: 34px;
+  //
+  //   }
+  //   .project-info-t {
+  //     padding: 0px 7px 0px 38px;
+  //   }
+  //   .project-info-f {
+  //     padding-left: 29px;
+  //   }
   //home
-  .pt100{
-    padding-top: 70px;
-  }
-  img .mar1{
-    margin-top: 22px;
+  .slider {
+    margin-top: 83px;
   }
   .fact-title .desc .lead {
-      font-size: 14px;
+    font-size: 17px;
   }
-  .fact-title .num .fact-number{
-      font-size: 46px;
+  .fact-title .num .fact-number {
+    font-size: 65px;
+  }
+  .project-info {
+    margin-top: 1px;
+  }
+  .project-info h3 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  .project-info-t {
+    padding: 0;
+  }
+  .project-info-f {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  li.brand {
+    margin: 7px 20px;
+    height: 55px;
+  }
+  .slides {
+    text-align: center;
+  }
+  .sponser {
+    .block-title {
+      text-align: center;
+      padding-bottom: 22px;
+      margin-bottom: 20px;
+    }
+  }
+  //activity
+  .activity-info h4 {
+    margin-top: -7px;
+  }
+  .pos-middle {
+    width: 100%;
+    padding: 0 50px;
+  }
+  //about
+
+}
+@media (max-width: $screen-sm-max) {
+  // .section-other { height: 10px; }
+  .rti-banner img {
+    margin-top: 125px;
+}
+.mt83{
+   .rti-banner img {
+    margin-top: 125px;
+}
+}
+  //home
+  //   .pos-middle {
+  //       position: absolute;
+  //       top: 50%;
+  //       left: 50%;
+  //       transform: translate(-50%, -50%);
+  //     }
+  //   .pt100{
+  //     padding-top: 70px;
+  //   }
+  //   .wtsm
+  //   {
+  //     width:49%;
+  //   }
+  //   .contact{
+  //     .block-title{
+  //     font-size: 32px;
+  //     }
+  //     p{
+  //       font-size: 14px;
+  //     }
+  //   }
+  //
+  //   // .event p{
+  //   //   margin:0 0 9px;
+  //   // }
+  // .pt70{
+  //     padding-top: 26px;
+  //   }
+  //   .project-photo{
+  //     padding-left: 6px;
+  //   }
+  //   img .mar1{
+  //     margin-top: 22px;
+  //   }
+  .fact-title .desc .lead {
+    font-size: 14px;
+  }
+  .fact-title .num .fact-number {
+    font-size: 46px;
   }
   .slider {
     margin-top: 125px;
   }
+  .block-title {
+    font-size: 28px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .project-info-f {
+    padding-left: 22px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    margin-top: 5px;
+  }
+  .project-info-t {
+    font-size: 12px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .project-info {
+    text-align: left;
+  }
+  .view-all {
+    padding-top: 20px;
+  }
+  li.brand {
+    margin: 4px 11px;
+    //  margin: 7px 20px;
+    height: 45px;
+  }
+  .btn {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+  .project-info h3 {
+    font-size: 12px;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    margin-top: 6px;
+  }
+  .pt70 {
+    padding-top: 0;
+  }
+  .event p {
+    font-size: 14px;
+    margin: 0 0 5px;
+  }
+  .map {
+    margin-bottom: 10px;
+  }
+  iframe {
+    height: 262px;
+  }
   //activity
-  .activity-info h4{
+  .activity-info h4 {
     margin-top: 18px;
   }
   //header
   .navbar-header {
-  float: none;
-  padding-top: 10px;
+    float: none;
+    padding-top: 10px;
   }
   .logo {
-  text-align: center;
+    text-align: center;
   }
-  img{}
+  img {}
   .logo img {
-  margin: 0 auto;
+    margin: 0 auto;
   }
   .nav-top {
-  padding-top: 12px;
-  padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: 20px;
   }
   //about
-.abt{
-  h1.block-title {
+  .abt {
+    h1.block-title {
       text-align: center;
       padding-bottom: 12px;
       margin-bottom: 25px;
     }
-}
+  }
 }
 @media (max-width: $screen-xs-max) {
-
-   //header
-   .navbar-toggle {
-        margin-top: 34px;
+  .pl30{
+    padding-left: 20px;
+  }
+  .rti-banner img {
+    margin-top: 62px;
+  }
+  .mt83 {
+    .rti-banner img {
+    margin-top: -21px;
+}
+}
+  //donate
+  .donate-form {
+    padding-left: 10px;
+  }
+  .note {
+    padding-left: 10px;
+  }
+  .mar p {
+    padding-left: 10px;
+  }
+  .sponser {
+    .block-title {
+      text-align: center;
+      margin-left: 80px;
+      margin-right: 80px;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
     }
-    .logo img {
-      margin: inherit;
+  }
+  // //home
+  // .pt100{
+  //   .pt70{
+  //     padding-top: 38px;
+  //   }
+  // }
+  // // .block-title {
+  // //   font-size: 32px;
+  // //   padding-bottom: 12px;
+  // // }
+  // // .event p{
+  // //   font-size: 14px;
+  // // }
+  // // .pt70 {
+  // //     padding-top: 21px;
+  // // }
+  .slider {
+    margin-top: 62px;
+  }
+  .icon {
+    margin-top: 35px;
+  }
+  .block-title {
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: 18px;
+  }
+  .pt70 {
+    padding-top: 12px;
+  }
+  .sec-mar {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  li.brand {
+    margin: 3px 0 2px 8px;
+    height: 35px;
+  }
+  ///////////////////////////
+  .project-info {
+    padding: 0 20px;
+    float: left;
+    text-align: center;
+  }
+  .project-info h3 {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    margin-top: 6px;
+  }
+  .mar_img {
+    margin: 0 auto;
+  }
+  .project-info-t {
+    padding: 0;
+    font-size: 14px;
+  }
+  .project-info-f {
+    font-size: 16px;
+    font-weight: 700;
+    border-top: 1px solid #CBCBCB;
+    padding-left: 22px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    margin-top: 5px;
+    position: relative;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+  .contact {
+    text-align: center;
+    margin-bottom: 24px;
+    .block-title {
+      display: inline-block;
+      margin-bottom: 10px;
     }
-   //about
+  }
+  /////////////////////////////
+  //header
+  .navbar-toggle {
+    margin-top: 34px;
+  }
+  .logo img {
+    margin: inherit;
+  }
+  //about
   .mt50 {
-    padding: 0px 10px;
+    padding: 0 10px;
   }
   //footer
   .copyright {
-    padding: 0px 0;
+    padding: 0;
     text-align: center;
     float: none !important;
   }
 }
 @media (max-width: 480px) {
-    //activity
-    .activity-info p {
-        font-size: 14px;
+  //activity
+  .activity-info p {
+    font-size: 14px;
+  }
+  //home
+  .fs26{
+    font-size: 26px;
+  }
+  li.brand {
+    margin: 15px 68px;
+  }
+  .sponser {
+    .block-title {
+      text-align: center;
+      margin-left: 30px;
+      margin-right: 30px;
     }
-    //about
+  }
+  .fact-box {
+    display: block;
+  }
+  .fact-title .desc .lead {
+    font-size: 12px;
+  }
+  .fact-title .num .fact-number {
+    font-size: 36px;
+  }
+  .event p {
+    font-size: 11px;
+  }
+  .project-info-f {
+    font-size: 16px;
+    font-weight: 700;
+    border-top: 1px solid #CBCBCB;
+    padding-left: 12px;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+    position: relative;
+  }
+  .btn {
+    padding: 4px 12px;
+    font-size: 16px;
+  }
+  .project-info h3 {
+    text-align: center;
+  font-size: 16px;
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  }
+  .project-info-t {
+    padding: 0;
+    font-size: 14px;
+  }
+  //     //
+  //     .rti-movement {
+  //       .block-title {
+  //       font-size: 28px;
+  //       }
+  //     }
+  //     .mar p{
+  //           font-size: 14px;
+  //     }
+  //     .note{
+  //       font-size: 14px;
+  //     }
+  //    //home
+  //    .contact{
+  //      text-align: center;
+  //      .block-title{
+  //        font-size: 22px;
+  //      }
+  //      p{
+  //        font-size: 12px;
+  //      }
+  //    }
+  //    .map
+  //     {
+  //       iframe{
+  //         height:200px;
+  //       }
+  //
+  //          margin-top: 35px;
+  //      }
+  //      .text-field input{
+  //        line-height: 40px;
+  //      }
+  //      .text-field textarea{
+  //        line-height: 25px;
+  //        resize: none;
+  //      }
+.map{
+  margin-bottom: 24px;
+}
+  //  about
   .block-title {
-      font-size: 26px;
-      padding-bottom: 12px;
-      margin-bottom: 25px;
-    }
-    .abt{
-      p{
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .pt70 {
+    padding-top: 0;
+  }
+  .abt {
+    p {
       font-size: 14px;
     }
   }
   .mt50 {
-    padding: 0px 6px;
+    padding: 0 6px;
   }
 }
