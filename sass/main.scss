@@ -285,7 +285,18 @@ h6 {
   position: static;
   background-attachment: fixed;
 }
+.section_w {
+  position: relative;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(32, 32, 32, 0.8);
+  }
+}
 .section_i {
+  min-height: 615px;
   position: relative;
   &:before {
     content: '';
@@ -373,7 +384,7 @@ li.brand {
   height: 70px;
   overflow: hidden;
   display: block;
-  margin: 0 20px;
+  margin: 0 19px;
   img {
     max-height: 100%;
     max-width: 100%;
