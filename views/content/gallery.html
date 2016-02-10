@@ -11,12 +11,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="data in gallery track by $index">
+      <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="data in gall track by $index">
         <div class="mb15">
-              <a class="fancybox-thumb" rel="fancybox-thumb" href="{{data.img}}" >
-          <img ng-src="{{data.img}}" class="img-responsive ">
-        </a>
-          </div>
+          <a class="fancybox-thumb" rel="fancybox-thumb" href="{{data|uploadpath}}">
+            <img ng-src="{{data|uploadpath}}" class="img-responsive ">
+          </a>
+        </div>
       </div>
     </div>
   </div>

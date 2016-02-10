@@ -73,11 +73,13 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     }
   };
 });
+
 firstapp.directive('fancyboxThumb', function() {
     return {
         restrict: 'C',
         replace: false,
         link: function($scope, element, attrs) {
+
             $('.fancybox-thumb').fancybox({
                 prevEffect: 'none',
                 nextEffect: 'none',
@@ -102,6 +104,11 @@ firstapp.filter('thumbimage', function() {
         } else {
             return "";
         }
+    };
+});
+firstapp.filter('uploadpath', function() {
+    return function(input) {
+        return adminurl + "uploadfile/resize?file=" + input+ "&height=200";
     };
 });
 firstapp.directive('img', function($compile, $parse) {

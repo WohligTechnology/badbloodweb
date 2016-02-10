@@ -2,7 +2,7 @@
   <div class="slider">
     <flex-slider flex-slide="s in mySlides">
       <li>
-        <img ng-src="{{s}}" class="img-responsive">
+        <img ng-src="{{s|uploadpath}}" class="img-responsive">
       </li>
     </flex-slider>
   </div>
@@ -177,11 +177,10 @@
         <div class="col-md-3 col-sm-3 col-xs-6" data-my-order="1" ng-repeat="data in gallery track by $index">
           <div class="item-wrapper">
             <div class="mb15">
-              <img ng-src="{{data.img}}" class="img-responsive ">
+              <img ng-src="{{data|uploadpath}}" class="img-responsive ">
               <div class="item-overlay">
                 <h3>tristique massa </h3>
                 <span class="info">Don not stay on the sidenes, help us, please contact us!</span>
-
               </div>
             </div>
           </div>
@@ -203,11 +202,13 @@
               <h1 class="block-title">Our Sponsor</h1>
 
               <div class="horizontal-carousel custom-li">
-                <ul class="slides">
+                <ul class="slides" ng-repeat="company in sponsor">
+                <a href="{{company.link}}" target="_blank">
                   <li class="brand">
-                    <img src="img/partner1.png" alt=""/>
+                    <img ng-src={{company.image|uploadpath}} alt=""/>
                   </li>
-                  <li class="brand">
+                </a>
+                  <!-- <li class="brand">
                     <img src="img/partner2.png" alt="" />
                   </li>
                   <li class="brand">
@@ -218,7 +219,7 @@
                   </li>
                   <li class="brand">
                     <img src="img/partner5.png" alt="" />
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>

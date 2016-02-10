@@ -9,49 +9,62 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
-  $scope.mySlides = [
-    'img/main_bg.jpg',
-    'img/main_bg2.jpg',
-    'img/main_bg3.jpg'
-
-  ];
-  $scope.mySlide = [
-    'img/partner1.png',
-    'img/partner2.png',
-    'img/partner3.png',
-    'img/partner4.png',
-    'img/partner5.png',
-    'img/partner6.png'
-
-  ];
-  $scope.gallery = [{
-    img: "img/gallery1.jpg"
-  }, {
-    img: "img/gallery2.jpg"
-  }, {
-    img: "img/gallery3.jpg"
-  }, {
-    img: "img/gallery4.jpg"
-  }, {
-    img: "img/gallery1.jpg"
-  }, {
-    img: "img/gallery2.jpg"
-  }, {
-    img: "img/gallery3.jpg"
-  }, {
-    img: "img/gallery4.jpg"
-  }, {
-    img: "img/gallery1.jpg"
-  }];
-  $scope.gallerys = [{
-    image: "img/gallery1.jpg"
-  }, {
-    image: "img/gallery2.jpg"
-  }, {
-    image: "img/gallery3.jpg"
-  }, {
-    image: "img/gallery4.jpg"
-  }];
+  // $scope.mySlides = [
+  //   'img/main_bg.jpg',
+  //   'img/main_bg2.jpg',
+  //   'img/main_bg3.jpg'
+  // ];
+  $scope.mySlides = [];
+  NavigationService.getSlide(function(data) {
+    console.log(data);
+    $scope.mySlides = data[0].image;
+  });
+  $scope.sponsor =[];
+  NavigationService.getSponser(function(data) {
+    console.log(data);
+    $scope.sponsor = data;
+  });
+  // $scope.sponser = [
+  //   'img/partner1.png',
+  //   'img/partner2.png',
+  //   'img/partner3.png',
+  //   'img/partner4.png',
+  //   'img/partner5.png',
+  //   'img/partner6.png'
+  // ];
+ $scope.gallery = [];
+  NavigationService.getGallery(function(data) {
+    console.log(data);
+    $scope.gallery = data.images;
+  });
+  // $scope.gallery = [{
+  //   img: "img/gallery1.jpg"
+  // }, {
+  //   img: "img/gallery2.jpg"
+  // }, {
+  //   img: "img/gallery3.jpg"
+  // }, {
+  //   img: "img/gallery4.jpg"
+  // }, {
+  //   img: "img/gallery1.jpg"
+  // }, {
+  //   img: "img/gallery2.jpg"
+  // }, {
+  //   img: "img/gallery3.jpg"
+  // }, {
+  //   img: "img/gallery4.jpg"
+  // }, {
+  //   img: "img/gallery1.jpg"
+  // }];
+  // $scope.gallerys = [{
+  //   image: "img/gallery1.jpg"
+  // }, {
+  //   image: "img/gallery2.jpg"
+  // }, {
+  //   image: "img/gallery3.jpg"
+  // }, {
+  //   image: "img/gallery4.jpg"
+  // }];
   $scope.activity = [{
     image: "img/project1.jpg",
     title:"Help girls to get water",
@@ -145,25 +158,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
-  $scope.gallery = [{
-    img: "img/gallery1.jpg"
-  }, {
-    img: "img/gallery2.jpg"
-  }, {
-    img: "img/gallery3.jpg"
-  }, {
-    img: "img/gallery4.jpg"
-  }, {
-    img: "img/gallery1.jpg"
-  }, {
-    img: "img/gallery2.jpg"
-  }, {
-    img: "img/gallery3.jpg"
-  }, {
-    img: "img/gallery4.jpg"
-  }, {
-    img: "img/gallery1.jpg"
-  }];
+  $scope.gall = [];
+  NavigationService.getGall(function(data) {
+    console.log(data);
+    $scope.gall = data.images;
+  });
+  // $scope.gallery = [{
+  //   img: "img/gallery1.jpg"
+  // }, {
+  //   img: "img/gallery2.jpg"
+  // }, {
+  //   img: "img/gallery3.jpg"
+  // }, {
+  //   img: "img/gallery4.jpg"
+  // }, {
+  //   img: "img/gallery1.jpg"
+  // }, {
+  //   img: "img/gallery2.jpg"
+  // }, {
+  //   img: "img/gallery3.jpg"
+  // }, {
+  //   img: "img/gallery4.jpg"
+  // }, {
+  //   img: "img/gallery1.jpg"
+  // }];
 
 })
 .controller('DonateCtrl', function($scope, TemplateService, NavigationService, $timeout) {
