@@ -1,50 +1,50 @@
 // JavaScript Document
 var firstapp = angular.module('firstapp', [
-    'ui.router',
-    'phonecatControllers',
-    'templateservicemod',
-    'navigationservice'
+  'ui.router',
+  'phonecatControllers',
+  'templateservicemod',
+  'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
-    // for http request with session
-    $httpProvider.defaults.withCredentials = true;
+  // for http request with session
+  $httpProvider.defaults.withCredentials = true;
 
-    $stateProvider
+  $stateProvider
 
     .state('home', {
-        url: "/home",
-        templateUrl: "views/template.html",
-        controller: 'HomeCtrl'
+      url: "/home",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
     })
     .state('donate', {
-        url: "/donate",
-        templateUrl: "views/template.html",
-        controller: 'DonateCtrl'
+      url: "/donate",
+      templateUrl: "views/template.html",
+      controller: 'DonateCtrl'
     })
     .state('gallery', {
-        url: "/gallery",
-        templateUrl: "views/template.html",
-        controller: 'GalleryCtrl'
+      url: "/gallery",
+      templateUrl: "views/template.html",
+      controller: 'GalleryCtrl'
     })
     .state('activity', {
-        url: "/activity",
-        templateUrl: "views/template.html",
-        controller: 'ActivityCtrl'
+      url: "/activity",
+      templateUrl: "views/template.html",
+      controller: 'ActivityCtrl'
     })
     .state('about', {
-        url: "/about",
-        templateUrl: "views/template.html",
-        controller: 'AboutCtrl'
+      url: "/about",
+      templateUrl: "views/template.html",
+      controller: 'AboutCtrl'
     })
     .state('rti', {
-        url: "/rti",
-        templateUrl: "views/template.html",
-        controller: 'RtiCtrl'
+      url: "/rti",
+      templateUrl: "views/template.html",
+      controller: 'RtiCtrl'
     });
 
-    $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/home");
 
 });
 
@@ -53,7 +53,7 @@ firstapp.directive('container', function() {
     restrict: 'C',
     replace: false,
     link: function($scope, element, attrs) {
-$('#Container').mixItUp();
+      $('#Container').mixItUp();
     }
   };
 });
@@ -75,61 +75,65 @@ firstapp.directive('autoHeight', function($compile, $parse) {
 });
 
 firstapp.directive('fancyboxThumb', function() {
-    return {
-        restrict: 'C',
-        replace: false,
-        link: function($scope, element, attrs) {
+  return {
+    restrict: 'C',
+    replace: false,
+    link: function($scope, element, attrs) {
 
-            $('.fancybox-thumb').fancybox({
-                prevEffect: 'none',
-                nextEffect: 'none',
-                helpers: {
-                    title: {
-                        type: 'outside'
-                    },
-                    thumbs: {
-                        width: 70,
-                        height: 70
-                    }
-                }
-            });
+      $('.fancybox-thumb').fancybox({
+        prevEffect: 'none',
+        nextEffect: 'none',
 
+        helpers: {
+          title: {
+            type: 'outside'
+          },
+          thumbs: {
+            width: 70,
+            height: 70
+          }
         }
-    };
+      });
+
+    }
+  };
 });
 firstapp.filter('thumbimage', function() {
-    return function(input) {
-        if (input) {
-            return mainurl + 'image/index?name=' +input+ '&width=400';
-        } else {
-            return "";
-        }
-    };
+  return function(input) {
+    if (input) {
+      return mainurl + 'image/index?name=' + input + '&width=400';
+    } else {
+      return "";
+    }
+  };
 });
 firstapp.filter('uploadpath', function() {
-    return function(input) {
-        return adminurl + "uploadfile/resize?file=" + input+ "&height=200";
-    };
+  return function(input) {
+      return adminurl + "uploadfile/resize?file=" + input + "&height=200";
+  };
+});
+firstapp.filter('uploadpathforfancy', function() {
+  return function(input) {
+    if (input)
+      return adminurl + "uploadfile/resize?file=" + input;
+  };
 });
 firstapp.directive('img', function($compile, $parse) {
-    return {
-        restrict: 'E',
-        replace: false,
-        link: function($scope, element, attrs) {
-            var $element = $(element);
-            if(!attrs.noloading)
-            {
-                $element.after("<img src='img/loading.gif' class='loading' />");
-                var $loading = $element.next(".loading");
-                $element.load(function() {
-                    $loading.remove();
-                    $(this).addClass("doneLoading");
-                });
-            }
-            else
-            {
-                $($element).addClass("doneLoading");
-            }
-        }
-    };
+  return {
+    restrict: 'E',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      if (!attrs.noloading) {
+        $element.after("<img src='img/loading.gif' class='loading' />");
+        var $loading = $element.next(".loading");
+        $element.load(function() {
+          $loading.remove();
+          $(this).addClass("doneLoading");
+        });
+      } else {
+        $($element).addClass("doneLoading");
+      }
+    }
+  };
 });

@@ -95,21 +95,21 @@
               Event
             </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.
+                {{event.content}}
               </p>
-              <p>
+              <!-- <p>
                 Integer vitae condimentum dolor, et consectetur neque. In eget ornare lacu consectetur
               </p>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
                 survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
                 desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
+              </p> -->
             </div>
           </div>
           <div class="col-md-6">
             <div class="event-img pt70">
-              <img src="img/event.jpg" class="img-responsive">
+              <img ng-src="{{event.image|uploadpath}}" class="img-responsive">
             </div>
           </div>
         </div>

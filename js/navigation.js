@@ -1,7 +1,8 @@
 
 //var mainurl="http://wohlig.io:81/callApi/tmm/";
-var mainurl="http://192.168.0.119:1337/"
+var mainurl="http://192.168.0.126:1337/";
 //var adminurl = mainurl + "json/";
+// var imageurl=mainurl + "uploadfile/resize?file=";
 var adminurl = mainurl;
 var navigationservice = angular.module('navigationservice', [])
 
@@ -49,6 +50,13 @@ var navigationservice = angular.module('navigationservice', [])
               method: 'POST'
             }).success(callback);
           },
+          getEvent: function(callback) {
+                // $http.get(adminurl + 'getSlide').success(callback);
+                $http({
+                  url: adminurl + 'notification/find',
+                  method: 'POST'
+                }).success(callback);
+              },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
         if (navigation[i].name == menuname) {

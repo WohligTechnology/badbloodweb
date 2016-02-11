@@ -83,6 +83,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     desc:"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
   }];
 
+  $scope.event = [];
+   NavigationService.getEvent(function(data) {
+     console.log(data);
+     $scope.event = data[0];
+   });
+
 })
 .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
@@ -163,7 +169,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(data);
     $scope.gall = data.images;
   });
-  // $scope.gallery = [{
+  // $scope.gall = [{
   //   img: "img/gallery1.jpg"
   // }, {
   //   img: "img/gallery2.jpg"
