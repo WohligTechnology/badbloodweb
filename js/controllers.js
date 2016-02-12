@@ -1,13 +1,30 @@
+var top = 200;
+var duration = 2000;
+
+var offset = 300;
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider','duScroll'])
 .value('duScrollOffset', 100)
 .value('duScrollDuration', 1400)
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout,$document) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $stateParams, $location, $timeout, $document) {
 
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+  $scope.$on('$viewContentLoaded', function(event) {
+      setTimeout(function() {
+          makeAnimation($stateParams.id);
+      }, 100);
+  });
+
+  function makeAnimation(stateValue) {
+      var goTo = angular.element(document.getElementById(stateValue));
+      $document.scrollToElement(goTo, offset, duration);
+  }
+
+
 
   // $scope.mySlides = [
   //   'img/main_bg.jpg',

@@ -42,7 +42,17 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       url: "/rti",
       templateUrl: "views/template.html",
       controller: 'RtiCtrl'
-    });
+    })
+    // .state('event', {
+    //   url: "/",
+    //   templateUrl: "views/template.html",
+    //   controller: 'EventCtrl'
+    // });
+    .state('eventId', {
+      url: "/home/:id",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
+    })
 
   $urlRouterProvider.otherwise("/home");
 

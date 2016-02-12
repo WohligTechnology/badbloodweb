@@ -16,7 +16,7 @@ var navigationservice = angular.module('navigationservice', [])
       classis: "active",
       link: "#/home"
     }]
-  }];
+}];
 
   return {
     getnav: function() {
