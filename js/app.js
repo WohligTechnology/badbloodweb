@@ -19,33 +19,33 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'HomeCtrl'
     })
     .state('homeid', {
-      url: "/:id",
+      url: "/home/:id",
       templateUrl: "views/template.html",
       controller: 'HomeCtrl'
     })
     .state('donate', {
       url: "/donate",
-      templateUrl: "views/template-other.html",
+      templateUrl: "views/template.html",
       controller: 'DonateCtrl'
     })
     .state('gallery', {
       url: "/gallery",
-      templateUrl: "views/template-other.html",
+      templateUrl: "views/template.html",
       controller: 'GalleryCtrl'
     })
     .state('activity', {
       url: "/activity",
-      templateUrl: "views/template-other.html",
+      templateUrl: "views/template.html",
       controller: 'ActivityCtrl'
     })
     .state('about', {
       url: "/about",
-      templateUrl: "views/template-other.html",
+      templateUrl: "views/template.html",
       controller: 'AboutCtrl'
     })
     .state('rti', {
       url: "/rti",
-      templateUrl: "views/template-other.html",
+      templateUrl: "views/template.html",
       controller: 'RtiCtrl'
     })
     // .state('event', {
