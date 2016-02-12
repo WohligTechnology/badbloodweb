@@ -129,6 +129,26 @@ gulp.task('clean:tmp', function() {
 });
 
 
+gulp.task('clean:pImages', function() {
+  return gulp.src('./production/img', {
+      read: false
+    })
+    .pipe(wait(200))
+    .pipe(clean({
+      force: true
+    }));
+});
+
+gulp.task('clean:pFont', function() {
+  return gulp.src('./production/fonts', {
+      read: false
+    })
+    .pipe(wait(200))
+    .pipe(clean({
+      force: true
+    }));
+});
+
 gulp.task('clean:w', function() {
   return gulp.src('./w', {
       read: false
@@ -312,6 +332,6 @@ gulp.task('development', ["sass:development", "watch:all"]);
 gulp.task('minifyhtml', ["minify:indexHTML", "minify:views", "templatecache"]);
 gulp.task('copy', ["copy:img", "copy:fonts"]);
 
-
+gulp.task('clearimage', ["clean:pImages", "clean:pFont"]);
 gulp.task('production', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', "concat:js", 'clean:tmp', "templatecache", "uglify:js","minify:css", 'clean:tmp', "inlinesource", 'clean:tmp', "gzipfile", 'clean:tmp', 'clean:tmp', "zip"));
 gulp.task('production2', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp',  "concat:js", 'clean:tmp',"templatecache","uglify:js", "minify:css", 'clean:tmp', "inlinesource", 'clean:tmp', "copy:indexhtml", 'clean:tmp', 'clean:tmp', "zip"));
