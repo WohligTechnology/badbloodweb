@@ -21,7 +21,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         id = "home";
       }
       var someElement = angular.element(document.getElementById(id));
-      $document.scrollToElement(someElement, 190, 1400);
+      $document.scrollToElement(someElement, 165, 1400);
     }
 
     $scope.$on('$viewContentLoaded', function(event) {

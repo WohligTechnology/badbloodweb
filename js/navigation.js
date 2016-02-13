@@ -18,7 +18,7 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Gallery",
     classis: "active",
-    anchor: "gallery",
+    link: "gallery",
   }, {
     name: "Event",
     classis: "active",
@@ -31,10 +31,6 @@ var navigationservice = angular.module('navigationservice', [])
     name: "Contact Us",
     classis: "active",
     anchor: "contact",
-  }, {
-    name: "Donate",
-    classis: "active",
-    link: "donate",
   }];
 
   return {

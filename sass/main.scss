@@ -220,6 +220,10 @@ h6 {
 .navbar{
   margin-bottom: 0px;
 }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color:$white;
+  background-color: #2E303C;;
+}
 .navbar-default .navbar-nav > li > a {
   color: $white;
   @include transition(all .1s ease-in-out );
@@ -253,23 +257,45 @@ h6 {
   border-bottom: 1px solid #CBCBCB;
   // padding-bottom: 28px;
   margin-bottom: 10px;
-  margin-top: 5px;
+  margin-top: 30px;
   padding-bottom: 5px;
   position: relative;
 }
-.sec-mar {
-  margin-top: 26px;
-  margin-bottom: 26px;
+.pl30{
+  .block-title {
+  border-bottom: 1px solid #CBCBCB;
+  // padding-bottom: 28px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  padding-bottom: 5px;
+  position: relative;
 }
-.section-other{
-  margin-top: 26px;
-  margin-bottom: 26px;
 }
-.sec-other{
-  margin-top: 26px;
-  margin-bottom: 26px;
+.gal{
+  .block-title {
+    border-bottom: 1px solid #CBCBCB;
+    // padding-bottom: 28px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    padding-bottom: 5px;
+    position: relative;
+  }
 }
-
+// .sec-mar {
+//   margin-top: 26px;
+//   margin-bottom: 26px;
+// }
+// .section-other{
+//   margin-top: 26px;
+//   margin-bottom: 26px;
+// }
+// .sec-other{
+//   margin-top: 26px;
+//   margin-bottom: 26px;
+// }
+.map{
+      margin-top: 50px;
+}
 .fact-li {
   padding-left: 16px;
   li {
@@ -316,6 +342,7 @@ h6 {
   background-attachment: fixed;
 }
 .section_w {
+  margin-top: 50px;
   position: relative;
   &:before {
     content: '';
@@ -325,7 +352,12 @@ h6 {
     background: rgba(32, 32, 32, 0.8);
   }
 }
+.mt100 {
+    margin-top: 50px;
+  }
+
 .section_i {
+  margin-top: 50px;
   min-height: 615px;
   position: relative;
   &:before {
@@ -346,7 +378,7 @@ h6 {
 //   padding-top: 100px;
 // }
 .pt70 {
-  padding-top: 64px;
+  padding-top: 42px;
 }
 .view-all {
   padding-top: 34px;
