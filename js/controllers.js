@@ -53,7 +53,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.sponsor = [];
     NavigationService.getSponser(function(data) {
       console.log(data);
-      $scope.sponsor = data;
+      if(data.value!=false)
+      {
+         $scope.sponsor = data;
+       }
+       else {
+           $scope.sponsor = [];
+       }
     });
     // $scope.sponser = [
     //   'img/partner1.png',
