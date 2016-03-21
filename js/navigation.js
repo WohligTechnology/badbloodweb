@@ -1,7 +1,7 @@
 
 //var mainurl="http://wohlig.io:81/callApi/tmm/";
-var mainurl="http://192.168.0.117:1337/";
-//var mainurl="http://104.154.50.117/";
+// var mainurl="http://192.168.0.126/";
+var mainurl="http://104.154.50.117/";
 //var adminurl = mainurl + "json/";
 // var imageurl=mainurl + "uploadfile/resize?file=";
 var adminurl = mainurl;

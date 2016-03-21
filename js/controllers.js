@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'angular-flexslider', 'duScroll'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'angular-flexslider', 'duScroll','ngAnimate'])
   .controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $stateParams, $location, $timeout, $document) {
     // $scope.$on('$viewContentLoaded', function(event) {
     //     setTimeout(function() {
@@ -134,40 +134,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
-
-    $scope.accordian = [];
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
-    $scope.accordian.push({
-      isFirstOpen: true,
-      isFirstDisabled: false
-    });
+    $scope.status = {
+      isFirstOpen : true
+    };
 
   })
   .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
