@@ -40,11 +40,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       makeAnimation(id);
       $location.replace();
     };
-    // $scope.mySlides = [
-    //   'img/main_bg.jpg',
-    //   'img/main_bg2.jpg',
-    //   'img/main_bg3.jpg'
-    // ];
+    $scope.mySliders = [
+      'img/s1.jpg',
+      'img/s2.jpg',
+      'img/s3.jpg',
+      'img/s4.jpg',
+      'img/s5.jpg'
+    ];
     $scope.mySlides = [];
     NavigationService.getSlide(function(data) {
       console.log(data);
@@ -104,20 +106,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     // }];
     $scope.activity = [{
       image: "img/project1.jpg",
-      title: "Help girls to get water",
-      desc: "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+      title: "Manav Blood Donation Movement",
+      desc: "  “NO HUMAN DIE FOR WANT OF BLOOD, A VITAL FLUID HAVING NO SUBTITUTE”Since 1971 Tarun Mitra Mandal regularly educates and explains the importance of voluntary blood donation and motivates healthy people to donate blood. From 1971 to till May 2015 the organization has been instrumental in collecting more than 1,17,842 units of blood. At present, every year 3 camps of full day are arranged. Tarun Mitra Mandal is the leading organization for voluntary blood donation and for that matter is the only social organization of megapoly now having a track record of collecting an average of 3500 blood units in a single day camp."
+    }, {
+      image: "",
+      title: "Book Bank for needy students",
+      desc: " The journey of TMM began with the managing Book Bank of Shri K.V.O.S. Jain Mahajan in 1969. At the beginning of each academic year, students get the entire set of required textbooks against a nominal refundable deposit.Till June 2015 more than 34,000 students have been extended the helping hand to pursue their studies. Incidental to this, notebooks, school uniforms, raincoats/umbrella and other education related things are distributed free of cost to the poorest of poor of the society irrespective of caste, creed, colour, faith or religion. "
     }, {
       image: "img/project1.jpg",
-      title: "Help girls to get water",
-      desc: "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+      title: "Lecture Series",
+      desc: " With a view, to spread knowledge and information and also to propogate moral & ethical values, lecture series, each of 3-5 days are being organised twice a year since last thirty years. Eminent speakers from different walks of life are invited to enlighten the audience and to spread the do\'s and have\'s. Each series is being attended daily by more than 500 people."
     }, {
       image: "img/project1.jpg",
-      title: "Help girls to get water",
-      desc: "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+      title: "Feed the hungry",
+      desc: "Hunger is still the no.1 cause of death in the world and a third of the world's hungry live in India. Each minute, five Indians die of hunger which makes 7000 each day and 2.5 million people dying of hunger in India every year.*With a mere 0.9% of India's GDP being spent on health care, the scenario, not surprisingly, isn't a very pleasing one. Data shows that every second child in the country suffers from malnutrition, that over 1,000 people succumb to Tuberculosis everyday, that almost 60,000 children are born with HIV each year! Basic health care and health assurance seem to be a distant dream for most of the population. Your gift will provide someone with one of life's most basic requirements - their health!"
     }, {
       image: "img/project1.jpg",
-      title: "Help girls to get water",
-      desc: "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque urna, venenatis convallis quam et, facilisis vestibulum nunc.Fusce quis venenatis"
+      title: "Yuvraj Eye Donation Movement",
+      desc: "  “Donate Eye Spread Light”Having carved a niche in the blood-donation movement and made a prime place for itself, Tarun Mitra Mandal Had decided to launch the Yuvraj Eye Donation Movement on the 50th anniversary of India’s Independence i.e 15th august,1997. Eye Donation Movement is inspired by Shri K.V.O.S. Jain Mahajan.The Slogan coined was “Blindness-Quit India”."
+    }, {
+      image: "img/project1.jpg",
+      title: "Sakshamta Abhiyan",
+      desc: " Nine College students who were at the end of their last term wanted to do something innovative and useful for the people during vacation and collectively came up with the initiative named “SAKSHAMTA ABHIYAN” which was leaded by Zubin Savla.The project was built to educate people about basic learning and debugging in electronic equipments, computer and mobile which are in daily use in very much informal way of learning. "
     }];
 
     $scope.event = [];

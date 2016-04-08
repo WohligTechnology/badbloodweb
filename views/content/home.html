@@ -1,10 +1,15 @@
 <section>
   <div class="slider">
-    <flex-slider flex-slide="s in mySlides">
+    <flex-slider flex-slide="s in mySliders">
+      <li>
+        <img ng-src="{{s}}" class="img-responsive">
+      </li>
+    </flex-slider>
+    <!-- <flex-slider flex-slide="s in mySlides">
       <li>
         <img ng-src="{{s|uploadpath}}" class="img-responsive">
       </li>
-    </flex-slider>
+    </flex-slider> -->
   </div>
 </section>
 
@@ -74,7 +79,7 @@
                 <img src="img/medical107.png" class="img-responsive">
               </div>
               <div class="num">
-                <span class="fact-number" data-to="1024" data-speed="1500">1,024</span>
+                <span class="fact-number" data-to="1024" data-speed="1500">6000+</span>
               </div>
               <div class="desc">
                 <span class="lead">Number of RTI Applicators</span>
@@ -87,7 +92,7 @@
                 <img src="img/eye.png" class="img-responsive">
               </div>
               <div class="num">
-                <span class="fact-number" data-to="1024" data-speed="1500">1,024</span>
+                <span class="fact-number" data-to="1024" data-speed="1500">14628</span>
               </div>
               <div class="desc">
                 <span class="lead">Number of Eye Donors</span>
@@ -109,8 +114,11 @@
               <h1 class="block-title">
               Event
             </h1>
-              <p>
+              <!-- <p>
                 {{event.content}}
+              </p> -->
+              <p>
+                Blood Camp @ Chinchpokli Mahajan Wadi, Vashi and Dombivali on Sunday 01/05/2016 and @ Ghatkopar and Malad on Sunday 08/05/2016.
               </p>
               <!-- <p>
                 Integer vitae condimentum dolor, et consectetur neque. In eget ornare lacu consectetur
@@ -124,6 +132,7 @@
           </div>
           <div class="col-md-6">
             <div class="event-img pt70">
+              <!-- <img ng-src="img/.jpg" class="img-responsive"> -->
               <img ng-src="{{event.image|uploadpath}}" class="img-responsive">
             </div>
           </div>
@@ -144,7 +153,7 @@
       <div class="col-md-6 col-sm-6" ng-repeat="data in activity">
         <div class="project-box">
           <div class="row">
-            <div class="col-md-6 col-sm-6">
+            <!-- <div class="col-md-6 col-sm-6">
               <div class="project-photo">
                 <div class="project-photo-w">
                   <img ng-src="{{data.image}}" alt="" class="img-responsive mar_img" />
@@ -152,15 +161,15 @@
 
               </div>
 
-            </div>
-            <div class="col-md-6 col-sm-6">
+            </div> -->
+            <div class="col-md-offset-1 col-md-10 col-sm-6">
               <div class="project-info">
                 <h3>{{data.title}}</h3>
                 <div class="project-info-t">
                   {{data.desc}}
                 </div>
                 <div class="project-info-f">
-                  <button class="btn btn-primary">Read More</button>
+                  <button class="btn btn-primary" ui-sref="activity">Read More</button>
                 </div>
               </div>
               <span class="clearfix"></span>

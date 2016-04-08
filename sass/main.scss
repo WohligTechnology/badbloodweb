@@ -231,6 +231,7 @@ h6 {
   padding-bottom: 10px;
   padding-top: 6px;
   height: 30px;
+  line-height: 16px;
   &:hover {
     color: $brand-primary;
   }
@@ -256,6 +257,14 @@ h6 {
 }
 .block-title {
   border-bottom: 1px solid #CBCBCB;
+  // padding-bottom: 28px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  position: relative;
+}
+.block-title1 {
+  border-bottom: 1px solid #D9EDF7;
   // padding-bottom: 28px;
   margin-bottom: 10px;
   margin-top: 30px;
@@ -400,7 +409,7 @@ h6 {
   float: left;
   text-align: center;
   h3 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     border-bottom: 1px solid #CBCBCB;
     padding-bottom: 22px;
@@ -410,6 +419,8 @@ h6 {
 }
 .project-info-t {
   padding: 0 23px;
+  height: 150px;
+overflow: hidden;
 }
 .project-info-f {
   font-size: 16px;
@@ -714,4 +725,8 @@ img.fancybox-image {
   }
 }
 // end rti page
+.table-bordered > tbody > tr > td{
+        border: 2px solid #CBCBCB;
+}
+
 @import "mobile_raj";
