@@ -17,12 +17,18 @@
          <div class="col-md-4">
             <div class="donate-form ">
                <form class="mb30" ng-submit="donate();">
-                  <label for="">Name</label>
-                  <input type="text" class="form-control ipfocus" placeholder="Name" ng-model="donateNow.name" required>
-                  <label for="">Telephone No</label>
-                  <input type="text" class="form-control ipfocus" placeholder="Telephone No" ng-model="donateNow.mobileno" required>
-                  <label for="">Amount Wish To Contribute</label>
-                  <input type="number" class="form-control ipfocus" placeholder="Amount" required ng-model="donateNow.amt">
+                 <div class="form-group">
+                   <label for="">Name</label>
+                   <input type="text" class="form-control ipfocus" placeholder="Name" ng-model="donateNow.name" required>
+                 </div>
+                 <div class="form-group">
+                   <label for="">Telephone No</label>
+                   <input type="text" class="form-control ipfocus" placeholder="Telephone No" ng-model="donateNow.mobileno" required>
+                 </div>
+                 <div class="form-group">
+                   <label for="">Amount Wish To Contribute</label>
+                   <input type="number" class="form-control ipfocus" placeholder="Amount" required ng-model="donateNow.amt">
+                 </div>
                   <div class="mb30">
                      <button class="btn btn-primary" type="submit">Submit</button>
                      <button class="btn btn-primary">Cancel</button>
