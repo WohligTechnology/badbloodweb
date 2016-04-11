@@ -283,7 +283,7 @@
         <div class="row" ng-init="showThanks=false;">
           <div class="col-md-12">
           <div class="contact-form" ng-hide="showThanks">
-              <form>
+              <form ng-submit="showThanks=true;">
                 <div class="row">
                   <div class="col-md-4 col-sm-4">
                     <div class="text-field">
@@ -310,7 +310,7 @@
                     <span class="your-subject"><textarea class="tafocus" name="your-subject" placeholder="Your Text" required></textarea></span>
                   </div>
                   <div class="send-message submit-field pull-right">
-                    <input type="submit" value="Send Message" class="btn btn-primary btn-large ipfocus" ng-click="showThanks=true" />
+                    <input type="submit" value="Send Message" class="btn btn-primary btn-large ipfocus" />
                   </div>
                 </div>
               </form>
