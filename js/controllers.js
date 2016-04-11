@@ -264,11 +264,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, $stateParams, $location, $timeout, $document) {
         $(window).scrollTop(0);
     });
+    $scope.subscribe = {};
+    $scope.showThanks = false;
+    $scope.subscribeNow = function() {
+        console.log($scope.subscribe);
+        NavigationService.subscribeNow($scope.subscribe, function(data) {
+            console.log(data);
+            $scope.showThanks = true;
+        })
+    }
+
 })
 
 ;
