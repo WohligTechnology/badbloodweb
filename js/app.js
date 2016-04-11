@@ -31,12 +31,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         .state('success', {
             url: "/success",
             templateUrl: "views/template.html",
-            controller: 'DonateCtrl'
+            controller: 'SuccessCtrl'
         })
         .state('failure', {
-            url: "/failure",
+            url: "/failure/:id",
             templateUrl: "views/template.html",
-            controller: 'DonateCtrl'
+            controller: 'FailureCtrl'
         })
         .state('gallery', {
             url: "/gallery",

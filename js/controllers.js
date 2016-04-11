@@ -264,6 +264,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
+.controller('SuccessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("success");
+    $scope.menutitle = NavigationService.makeactive("Success");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+})
+
+.controller('FailureCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("failure");
+    $scope.menutitle = NavigationService.makeactive("Failure");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+    $scope.transId = $stateParams.id;
+
+})
+
 .controller('headerctrl', function($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, $stateParams, $location, $timeout, $document) {
@@ -279,6 +299,4 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         })
     }
 
-})
-
-;
+});
