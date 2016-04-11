@@ -1,9 +1,4 @@
-//var mainurl="http://wohlig.io:81/callApi/tmm/";
-// var mainurl="http://192.168.0.126/";
-var mainurl = "http://api.thetmm.org/";
-//var adminurl = mainurl + "json/";
-// var imageurl=mainurl + "uploadfile/resize?file=";
-var adminurl = mainurl;
+var adminurl = "http://api.thetmm.org/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
