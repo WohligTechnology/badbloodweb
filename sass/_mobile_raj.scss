@@ -31,7 +31,7 @@
     font-size: 17px;
   }
   .fact-title .num .fact-number {
-    font-size: 65px;
+    font-size: 35px;
   }
   .project-info {
     margin-top: 1px;
@@ -103,7 +103,19 @@ display: block;
     font-size: 14px;
   }
   .fact-title .num .fact-number {
-    font-size: 46px;
+    font-size: 28px;
+  }
+  .blood-count {
+    .row-flex {
+      @include flex-wrap(wrap);
+      .col-flex {
+        @include flex(auto);
+        .fact-title {
+          width: 200px;
+          margin: 15px auto;
+        }
+      }
+    }
   }
   .slider {
     margin-top: 108px;
@@ -137,7 +149,8 @@ display: block;
     padding: 0;
   }
   .project-info {
-    text-align: left;
+    padding: 20px;
+    text-align: center;
   }
   .view-all {
     padding-top: 20px;
@@ -204,6 +217,7 @@ display: block;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .navbar-default .navbar-nav > li > a { margin: 10px 0; }
   .mt100 {
         margin-top: 34px;
     padding-top: 0px;
@@ -275,18 +289,13 @@ display: block;
     padding-top: 2px;
   }
   .sec-mar {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 30px 0;
   }
   li.brand {
     margin: 3px 0 2px 8px;
     height: 35px;
   }
   ///////////////////////////
-  .project-info {
-    padding: 0 20px;
-    text-align: center;
-  }
   .project-info h3 {
     text-align: center;
     font-size: 18px;
@@ -343,6 +352,19 @@ margin-top: 10px;
     padding: 0;
     text-align: center;
     float: none !important;
+  }
+  .blood-count {
+    padding: 0;
+    .row-flex {
+      display: block;
+      .col-flex {
+        display: block;
+      }
+    }
+  }
+  .act-head {
+    h2,
+    .view-all { font-size: 24px; }
   }
 }
 @media (max-width: 480px) {
@@ -448,5 +470,9 @@ font-size: 11px;
   }
   h2.margin-top{
     font-size: 16px;
+  }
+  .act-head {
+    h2,
+    .view-all { font-size: 20px; }
   }
 }
