@@ -67,6 +67,13 @@ var navigationservice = angular.module('navigationservice', [])
                 method: 'POST'
             }).success(callback);
         },
+        subscribeNow: function(formData, callback) {
+            $http({
+                url: adminurl + 'subscribe/save',
+                method: 'POST',
+                data: formData
+            }).success(callback);
+        },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {
