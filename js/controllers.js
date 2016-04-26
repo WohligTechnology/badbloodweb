@@ -136,16 +136,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
 
     })
-    .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("rti");
         $scope.menutitle = NavigationService.makeactive("Rti");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-
         $scope.status = {
             isFirstOpen: true
         };
+        $scope.open = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/mapplication.html',
+      controller: 'RtiCtrl',
+    });
+  };
 
     })
     .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {

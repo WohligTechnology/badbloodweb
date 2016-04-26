@@ -162,26 +162,40 @@ firstapp.directive('img', function($compile, $parse) {
         }
     };
 });
-firstapp.directive('fancybox', function($compile, $parse) {
-    return {
-        restrict: 'EA',
-        replace: false,
-        link: function($scope, element, attrs) {
-            $element = $(element);
-            console.log("Checking Fancybox");
-            setTimeout(function() {
-                $(".various").fancybox({
-                    maxWidth: 800,
-                    maxHeight: 600,
-                    fitToView: false,
-                    width: '70%',
-                    height: '70%',
-                    autoSize: false,
-                    closeClick: false,
-                    openEffect: 'none',
-                    closeEffect: 'none'
-                });
-            }, 100);
-        }
-    };
+// firstapp.directive('fancybox', function($compile, $parse) {
+//     return {
+//         restrict: 'EA',
+//         replace: false,
+//         link: function($scope, element, attrs) {
+//             $element = $(element);
+//             console.log("Checking Fancybox");
+//             setTimeout(function() {
+//                 $(".various").fancybox({
+//                     maxWidth: 800,
+//                     maxHeight: 600,
+//                     fitToView: false,
+//                     width: '70%',
+//                     height: '70%',
+//                     autoSize: false,
+//                     closeClick: false,
+//                     openEffect: 'none',
+//                     closeEffect: 'none'
+//                 });
+//             }, 100);
+//         }
+//     };
+// });
+
+$(document).ready(function() {
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
 });
