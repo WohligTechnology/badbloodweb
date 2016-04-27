@@ -762,13 +762,26 @@ img.fancybox-image {
         margin: 0;
     }
     .respect {
-        margin: 20px 0 25px;
+        margin: 20px 0 86px;
         font-size: 16px;
+    }
+    .respect1{
+      margin-top:20px;
+      font-size: 16px;
+    }
+    .respect2{
+      margin: 20px 0 55px;
+      font-size: 16px;
+    }
+    .respect3{
+      margin: 20px 0 100px;
+      font-size: 16px;
     }
     .formpage {
         .row {
             margin: 0;
         }
+      }
         .control-label {
             margin-bottom: 10px;
             padding-top: 0;
@@ -781,7 +794,12 @@ img.fancybox-image {
         .form-control{
           padding: 6px 6px;
         }
-    }
+        .sign{
+          margin: 13px 0 0 0;
+          float: right;
+          font-weight: bold;
+        }
+
   }
     .modal-footer {
         border: 0 ;

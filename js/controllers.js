@@ -151,6 +151,36 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       controller: 'RtiCtrl',
     });
   };
+        $scope.open1 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/mfirstappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open2 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/msecondappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open3 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/capplication.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open4 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/cfirstappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open5 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/csecondappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
 
     })
     .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
