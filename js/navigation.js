@@ -19,7 +19,7 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         anchor: "event",
     }, {
-        name: "RTI Moment",
+        name: "RTI",
         classis: "active",
         link: "rti",
     }, {
