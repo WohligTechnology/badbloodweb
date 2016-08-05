@@ -7,9 +7,18 @@
                 <a href="{{submenu.link}}">{{submenu.name}}</a>
             </li>
         </ul> -->
+        <div class="submenu" ng-if="menu.subnav !== undefined">
+            <ul class="dropdown-menu">
+                <li ng-repeat="submenu in menu.subnav">
+                    <a ui-serf="{{submenu.anchor}}" ng-if="submenu.anchor">{{submenu.name}}</a>
+                    <a ui-sref="{{submenu.link}}" ng-if="submenu.link">{{submenu.name}}</a>
+                </li>
+            </ul>
+        </div>
     </li>
     <li class="btn-donate"><a href="#/donate">Donate Now</a></li>
-    <li class="btn-donate"><a href="/rti" target="_new">Member Login</a></li>
+
+    <!-- <li class="btn-donate"><a href="/rti" target="_new">Member Login</a></li> -->
 </ul>
 
 <!-- <ul class="nav navbar-nav nav-top">

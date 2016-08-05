@@ -10,6 +10,23 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Activity",
         classis: "active",
         link: "activity",
+        subnav: [{
+            name: "Book Bank for needy students",
+            classis: "active",
+            anchor: "bloodbank"
+        }, {
+            name: "Lecture Series",
+            classis: "active",
+            anchor: "bloodbank"
+        }, {
+            name: "RTI",
+            classis: "active",
+            link: "rti"
+        }, {
+            name: "Feed the hungry",
+            classis: "active",
+            anchor: "bloodbank"
+        }]
     }, {
         name: "Gallery",
         classis: "active",
@@ -18,10 +35,7 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Event",
         classis: "active",
         anchor: "event",
-    }, {
-        name: "RTI",
-        classis: "active",
-        link: "rti",
+
     }, {
         name: "Contact Us",
         classis: "active",

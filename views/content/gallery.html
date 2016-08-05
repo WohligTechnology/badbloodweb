@@ -1,24 +1,24 @@
 <section auto-height>
-  <div class="rti-banner">
+    <!-- <div class="rti-banner">
     <img src="img/gall.jpg" class="img-responsive">
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="gall-det mt50">
-          <h1 class="block-title">Our Gallery</h1>
+  </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="gall-det mt50">
+                    <h1 class="block-title">Our Gallery</h1>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="data in gall track by $index" ng-if="gall">
-        <div class="mb15">
-          <!-- <a class="fancybox-thumb" rel="fancybox-thumb" ng-href="http://192.168.0.126:1337/uploadfile/resize?file={{data}}"> -->
-          <a class="fancybox-thumb" rel="fancybox-thumb" ng-href="{{data | uploadpathforfancy}}">
-            <img ng-src="{{data|uploadpath}}" class="img-responsive ">
-          </a>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="data in gall track by $index" ng-if="gall">
+                <div class="mb15">
+                    <!-- <a class="fancybox-thumb" rel="fancybox-thumb" ng-href="http://192.168.0.126:1337/uploadfile/resize?file={{data}}"> -->
+                    <a class="fancybox-thumb" rel="fancybox-thumb" ng-href="{{data | uploadpathforfancy}}">
+                        <img ng-src="{{data|uploadpath}}" class="img-responsive ">
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
