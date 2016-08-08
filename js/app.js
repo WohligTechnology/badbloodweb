@@ -48,6 +48,36 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
             templateUrl: "views/template.html",
             controller: 'ActivityCtrl'
         })
+        .state('manavblood', {
+            url: "/manavblood",
+            templateUrl: "views/template.html",
+            controller: 'ManavbloodCtrl'
+        })
+        .state('bookbank', {
+            url: "/bookbank",
+            templateUrl: "views/template.html",
+            controller: 'BookbankCtrl'
+        })
+        .state('lectureseries', {
+            url: "/lectureseries",
+            templateUrl: "views/template.html",
+            controller: 'LectureseriesCtrl'
+        })
+        .state('feedhungry', {
+            url: "/feedhungry",
+            templateUrl: "views/template.html",
+            controller: 'FeedhungryCtrl'
+        })
+        .state('yuvrajmovement', {
+            url: "/yuvrajmovement",
+            templateUrl: "views/template.html",
+            controller: 'YuvrajmovementCtrl'
+        })
+        .state('sakshamtaabhiyan', {
+            url: "/sakshamtaabhiyan",
+            templateUrl: "views/template.html",
+            controller: 'SakshamtaabhiyanCtrl'
+        })
         .state('about', {
             url: "/about",
             templateUrl: "views/template.html",
@@ -58,11 +88,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
             templateUrl: "views/template.html",
             controller: 'RtiCtrl'
         })
-        // .state('event', {
-        //   url: "/",
-        //   templateUrl: "views/template.html",
-        //   controller: 'EventCtrl'
-        // });
+        .state('event', {
+            url: "/event",
+            templateUrl: "views/template.html",
+            controller: 'EventCtrl'
+        })
+        .state('contact', {
+            url: "/contact",
+            templateUrl: "views/template.html",
+            controller: 'ContactCtrl'
+        })
         .state('eventId', {
             url: "/home/:id",
             templateUrl: "views/template.html",
@@ -187,15 +222,15 @@ firstapp.directive('img', function($compile, $parse) {
 // });
 
 $(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
-	});
+    $(".various").fancybox({
+        maxWidth: 800,
+        maxHeight: 600,
+        fitToView: false,
+        width: '70%',
+        height: '70%',
+        autoSize: false,
+        closeClick: false,
+        openEffect: 'none',
+        closeEffect: 'none'
+    });
 });

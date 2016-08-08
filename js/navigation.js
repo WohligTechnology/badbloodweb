@@ -11,21 +11,33 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "activity",
         subnav: [{
-            name: "Book Bank for needy students",
+            name: "Manav Blood Donation Movement",
             classis: "active",
-            anchor: "bloodbank"
+            link: "manavblood"
+        }, {
+            name: "Book Bank For Needy Students",
+            classis: "active",
+            link: "bookbank"
         }, {
             name: "Lecture Series",
             classis: "active",
-            anchor: "bloodbank"
+            link: "lectureseries"
+        }, {
+            name: "Feed The Hungry",
+            classis: "active",
+            link: "feedhungry"
+        }, {
+            name: "Yuvraj Eye Donation Movement",
+            classis: "active",
+            link: "yuvrajmovement"
+        }, {
+            name: "Sakshamta Abhiyan",
+            classis: "active",
+            link: "sakshamtaabhiyan"
         }, {
             name: "RTI",
             classis: "active",
             link: "rti"
-        }, {
-            name: "Feed the hungry",
-            classis: "active",
-            anchor: "bloodbank"
         }]
     }, {
         name: "Gallery",
@@ -34,12 +46,12 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
         name: "Event",
         classis: "active",
-        anchor: "event",
+        link: "event",
 
     }, {
         name: "Contact Us",
         classis: "active",
-        anchor: "contact",
+        link: "contact",
     }];
 
     return {

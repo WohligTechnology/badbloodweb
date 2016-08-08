@@ -145,48 +145,136 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.status = {
             isFirstOpen: true
         };
-        $scope.open = function () {
-    var modalInstance = $uibModal.open({
-      templateUrl: 'views/modal/mapplication.html',
-      controller: 'RtiCtrl',
-    });
-  };
-        $scope.open1 = function () {
-    var modalInstance = $uibModal.open({
-      templateUrl: 'views/modal/mfirstappeal.html',
-      controller: 'RtiCtrl',
-    });
-  };
-        $scope.open2 = function () {
-    var modalInstance = $uibModal.open({
-      templateUrl: 'views/modal/msecondappeal.html',
-      controller: 'RtiCtrl',
-    });
-  };
-        $scope.open3 = function () {
-    var modalInstance = $uibModal.open({
-      templateUrl: 'views/modal/capplication.html',
-      controller: 'RtiCtrl',
-    });
-  };
-        $scope.open4 = function () {
-    var modalInstance = $uibModal.open({
-      templateUrl: 'views/modal/cfirstappeal.html',
-      controller: 'RtiCtrl',
-    });
-  };
-        $scope.open5 = function () {
-    var modalInstance = $uibModal.open({
-      templateUrl: 'views/modal/csecondappeal.html',
-      controller: 'RtiCtrl',
-    });
-  };
+        $scope.open = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'views/modal/mapplication.html',
+                controller: 'RtiCtrl',
+            });
+        };
+        $scope.open1 = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'views/modal/mfirstappeal.html',
+                controller: 'RtiCtrl',
+            });
+        };
+        $scope.open2 = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'views/modal/msecondappeal.html',
+                controller: 'RtiCtrl',
+            });
+        };
+        $scope.open3 = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'views/modal/capplication.html',
+                controller: 'RtiCtrl',
+            });
+        };
+        $scope.open4 = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'views/modal/cfirstappeal.html',
+                controller: 'RtiCtrl',
+            });
+        };
+        $scope.open5 = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'views/modal/csecondappeal.html',
+                controller: 'RtiCtrl',
+            });
+        };
 
     })
     .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("about");
-        $scope.menutitle = NavigationService.makeactive("About");
+        $scope.menutitle = NavigationService.makeactive("About Us");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('EventCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("event");
+        $scope.menutitle = NavigationService.makeactive("Event");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('ManavbloodCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("manavblood");
+        $scope.menutitle = NavigationService.makeactive("Manav Blood");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('BookbankCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("bookbank");
+        $scope.menutitle = NavigationService.makeactive("Book Bank");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('LectureseriesCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("lectureseries");
+        $scope.menutitle = NavigationService.makeactive("Lecture Series");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('FeedhungryCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("feedhungry");
+        $scope.menutitle = NavigationService.makeactive("Feed The Hungry");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('YuvrajmovementCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("yuvrajmovement");
+        $scope.menutitle = NavigationService.makeactive("Yuvraj Eye Donation Movement");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('SakshamtaabhiyanCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("sakshamtaabhiyan");
+        $scope.menutitle = NavigationService.makeactive("Sakshamta Abhiyan");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("contact");
+        $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
