@@ -1,15 +1,15 @@
 <section class="mt-111">
     <div class="slider">
-        <flex-slider flex-slide="s in mySliders">
+        <!-- <flex-slider flex-slide="s in mySliders">
             <li>
                 <img ng-src="{{s}}" class="img-responsive">
             </li>
+        </flex-slider> -->
+        <flex-slider flex-slide="s in mySlides">
+            <li>
+                <img ng-src="{{s|uploadpath}}" class="img-responsive">
+            </li>
         </flex-slider>
-        <!-- <flex-slider flex-slide="s in mySlides">
-      <li>
-        <img ng-src="{{s|uploadpath}}" class="img-responsive">
-      </li>
-    </flex-slider> -->
     </div>
 </section>
 

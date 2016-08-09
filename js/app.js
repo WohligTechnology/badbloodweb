@@ -43,7 +43,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
             templateUrl: "views/template.html",
             controller: 'GalleryCtrl'
         })
-        .state('activity', {
+        .state('Activity', {
             url: "/activity",
             templateUrl: "views/template.html",
             controller: 'ActivityCtrl'

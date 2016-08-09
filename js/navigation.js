@@ -9,7 +9,7 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
         name: "Activity",
         classis: "active",
-        link: "activity",
+        link: "#",
         subnav: [{
             name: "Manav Blood Donation Movement",
             classis: "active",

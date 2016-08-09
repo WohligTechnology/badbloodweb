@@ -41,13 +41,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             makeAnimation(id);
             $location.replace();
         };
-        $scope.mySliders = [
-            'img/s1.jpg',
-            'img/s2.jpg',
-            'img/s3.jpg',
-            'img/s4.jpg',
-            'img/s5.jpg'
-        ];
+        // $scope.mySliders = [
+        //     'img/s1.jpg',
+        //     'img/s2.jpg',
+        //     'img/s3.jpg',
+        //     'img/s4.jpg',
+        //     'img/s5.jpg'
+        // ];
         $scope.mySlides = [];
         NavigationService.getSlide(function(data) {
             console.log(data);
@@ -139,11 +139,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("rti");
-        $scope.menutitle = NavigationService.makeactive("Rti");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "RTI";
         $scope.navigation = NavigationService.getnav();
         $scope.status = {
             isFirstOpen: true
+        };
+        $scope.openList = function() {
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/storymonth.html',
+                // controller: "RtiCtrl"
+                scope: $scope
+            });
         };
         $scope.open = function() {
             var modalInstance = $uibModal.open({
@@ -208,8 +216,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('ManavbloodCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("manavblood");
-        $scope.menutitle = NavigationService.makeactive("Manav Blood");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Manav Blood";
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
             console.log(id);
@@ -219,8 +227,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('BookbankCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("bookbank");
-        $scope.menutitle = NavigationService.makeactive("Book Bank");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Book Bank";
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
             console.log(id);
@@ -230,8 +238,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('LectureseriesCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("lectureseries");
-        $scope.menutitle = NavigationService.makeactive("Lecture Series");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Lecture Series";
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
             console.log(id);
@@ -241,8 +249,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('FeedhungryCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("feedhungry");
-        $scope.menutitle = NavigationService.makeactive("Feed The Hungry");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Feed The Hungry";
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
             console.log(id);
@@ -252,8 +260,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('YuvrajmovementCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("yuvrajmovement");
-        $scope.menutitle = NavigationService.makeactive("Yuvraj Eye Donation Movement");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Yuvraj Eye Donation Movement";
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
             console.log(id);
@@ -263,8 +271,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('SakshamtaabhiyanCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("sakshamtaabhiyan");
-        $scope.menutitle = NavigationService.makeactive("Sakshamta Abhiyan");
-        TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Sakshamta Abhiyan";
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
             console.log(id);
@@ -305,30 +313,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
-        $scope.gall = [];
-        NavigationService.getGall(function(data) {
-            console.log(data);
-            $scope.gall = data.images;
-        });
-        // $scope.gall = [{
-        //   img: "img/gallery1.jpg"
-        // }, {
-        //   img: "img/gallery2.jpg"
-        // }, {
-        //   img: "img/gallery3.jpg"
-        // }, {
-        //   img: "img/gallery4.jpg"
-        // }, {
-        //   img: "img/gallery1.jpg"
-        // }, {
-        //   img: "img/gallery2.jpg"
-        // }, {
-        //   img: "img/gallery3.jpg"
-        // }, {
-        //   img: "img/gallery4.jpg"
-        // }, {
-        //   img: "img/gallery1.jpg"
-        // }];
+        // $scope.gall = [];
+        // NavigationService.getGall(function(data) {
+        //     console.log(data);
+        //     $scope.gall = data.images;
+        // });
+        $scope.gall = [{
+            img: "img/gallery1.jpg"
+        }, {
+            img: "img/gallery2.jpg"
+        }, {
+            img: "img/gallery3.jpg"
+        }, {
+            img: "img/gallery4.jpg"
+        }, {
+            img: "img/gallery1.jpg"
+        }, {
+            img: "img/gallery2.jpg"
+        }, {
+            img: "img/gallery3.jpg"
+        }, {
+            img: "img/gallery4.jpg"
+        }, {
+            img: "img/gallery1.jpg"
+        }];
 
     })
 
@@ -419,7 +427,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.subscribeNow($scope.subscribe, function(data) {
             console.log(data);
             $scope.showThanks = true;
-        })
-    }
+        });
+    };
 
 });

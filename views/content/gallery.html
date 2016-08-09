@@ -111,8 +111,8 @@
         </div>
     </div>
 </section>
-<section auto-height class="mt83" ng-show="showGallery">
-    <div class="container">
+<section auto-height class="mt150" ng-show="showGallery">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="data in gall track by $index" ng-if="gall">
                 <div class="mb15">
@@ -120,6 +120,17 @@
               <a class="fancybox-thumb" rel="fancybox-thumb" ng-href="{{data | uploadpathforfancy}}">
                   <img ng-src="{{data|uploadpath}}" class="img-responsive ">
               </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="data in gall track by $index">
+                <div class="mb15">
+                    <a class="fancybox-thumb" rel="fancybox-thumb" href="{{data.img}}">
+                        <img src="{{data.img}}" class="img-responsive ">
+                    </a>
                 </div>
             </div>
         </div>
