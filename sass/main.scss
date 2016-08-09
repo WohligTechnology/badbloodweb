@@ -47,6 +47,7 @@ $font-family-serif: "Lato", "Roboto Slab", "Voyage Fantastique ","Advent Pro", G
     @include flex(1);
     position: relative;
 }
+.block { display: block; }
 #Container .mix {
     display: none;
 }
@@ -1007,5 +1008,11 @@ img.fancybox-image {
         }
     }
 }
-.divide {}
+.s-story{
+
+  padding: 5px;
+}
+.s-story1{
+  border-bottom: 1px solid black;
+}
 @import "mobile_raj";
