@@ -30,11 +30,11 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h4>RTI Rules</h4>
-                                        <div class="rti-det">
+                                        <div class="rti-det link-col">
                                             <a href="http://www.google.com/url?q=http%3A%2F%2Fyashada.org%2F2012%2Findex.php%3Foption%3Dcom_content%26view%3Darticle%26id%3D295%26Itemid%3D161&sa=D&sntz=1&usg=AFQjCNE8hC22xmqGbMZ4zbaJEUqtUDfAzA" target="_blank">RULES OF RTI</a>
                                         </div>
                                         <h4 class="mgt-45">RTI Fees</h4>
-                                        <div class="rti-det text-uppercase">
+                                        <div class="rti-det text-uppercase link-col">
                                             <a href="files/FLOWCHART.xls" target="_blank">Application Fees</a>
                                         </div>
                                     </div>
@@ -48,10 +48,12 @@
                             <div class="cont-box">
                                 <h3 class="mg0">Success Stories</h3>
                                 <div class="rti-det">
-                                    <h4>January 2016</h4>
-                                    <h4>Februrary 2016</h4>
-                                    <h4>March 2016</h4>
-                                    <h4>April 2016</h4>
+                                    <div class="mon-col">
+                                        <h4><a ng-click="openStory();">January 2016</a></h4>
+                                        <h4><a ng-click="openStory();">Februrary 2016</a></h4>
+                                        <h4><a ng-click="openStory();">March 2016</a></h4>
+                                        <h4><a ng-click="openStory();">April 2016</a></h4>
+                                    </div>
                                     <div class="vwmore text-center">
                                         <a type="button" class="btn btn-link btn-set" ng-click="openList();">View More</a>
                                     </div>
@@ -66,22 +68,54 @@
                     </div>
                     <div class="row ">
                         <div class="col-md-6 pd10 ">
-                            <div class="cont-box ">
-                                <h3 class="mg0 ">Application Format and Templates</h3>
+                            <div class="cont-box">
+                                <h3 class="mg0">Application Format and Templates</h3>
+                                <div class="rti-det link-col">
+                                    <h4>MAHARASHTRA STATE</h4>
+                                    <ul>
+                                        <li><a href="files/APPLICATION_MAHARASHTRA_STATE.doc" target="_blank">APPLICATION MAHARASHTRA STATE (Annexure-A)</a></li>
+                                        <li><a href="files/FIRST-APPEAL-MAHARASHTRA-STATE.doc" target="_blank">FIRST APPEAL MAHARASHTRA STATE (Annexure-B)</a></li>
+                                        <li><a href="files/SECOND-APPEAL-MAHARASHTRA-STATE.doc" target="_blank">SECOND APPEAL MAHARASHTRA STATE (Annexure-C)</a></li>
+                                    </ul>
+                                    <div class="vwmore text-center">
+                                        <a type="button" class="btn btn-link btn-set btn-clr" ng-click="openAppform();">View More</a>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="rti-det">
+                                    <h4>CENTRAL GOVERNMENT</h4>
+                                    <ul>
+                                        <li><a href="files/APPLICATION_CENTRAL_GOVT.doc" target="_blank">APPLICATION CENTRAL GOVERNMENT (Annexure-A)</a></li>
+                                        <li><a href="files/FIRST-APPEAL-CENTRAL-GOVT.doc" target="_blank">FIRST APPEAL CENTRAL GOVERNMENT (Annexure-B)</a></li>
+                                        <li><a href="files/Second -Appeal-Central-Government.doc" target="_blank">SECOND APPEAL CENTRAL GOVERNMENT (Annexure-C)</a></li>
+                                    </ul>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-md-6 pd10 ">
                             <div class="cont-box ">
                                 <h3 class="mg0 ">New Indian Appeal</h3>
+                                <div class="rti-det rti-mov">
+                                    <ul>
+                                        <li><a ng-click="openAppeal();">NEW INDIA REMIGRATION STORY</a></li>
+                                        <li><a ng-click="openAppeal();">CHANGE PROTEST</a></li>
+                                        <li><a ng-click="openAppeal();">COMPLAINTS UNDER MAHARASHTRA'S ACT 21 OF 2006</a></li>
+
+                                    </ul>
+                                    <div class="vwmore text-center">
+                                        <a type="button" class="btn btn-link btn-set btn-clr btn-pos" ng-click="openIndappeal();">View More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row ">
                         <div class="col-md-12 pd10 ">
                             <div class="cont-box1 ">
-                                <div class="map ">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.155518429655!2d72.8401085153308!3d19.01286755889365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cee784e322ad%3A0x36c6a4d5eb7ebd3!2sGada+%26+Haria!5e0!3m2!1sen!2sin!4v1453531159638 "
-                                        width="100% " height="350 " frameborder="0 " style="border:0 " allowfullscreen></iframe>
+                                <div class="get-map ">
+                                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.155518429655!2d72.8401085153308!3d19.01286755889365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cee784e322ad%3A0x36c6a4d5eb7ebd3!2sGada+%26+Haria!5e0!3m2!1sen!2sin!4v1453531159638 "
+                                        width="100% " height="350 " frameborder="0 " style="border:0 " allowfullscreen></iframe> -->
+                                    <div id="map" class="map-marker"></div>
                                 </div>
                                 <div class="vwmore text-center ">
                                     <a type="button " class="btn btn-link btn-set text-uppercase " target="_new " href="files/all_center_details.pdf ">Click here to download pdf</a>

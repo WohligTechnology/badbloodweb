@@ -47,7 +47,9 @@ $font-family-serif: "Lato", "Roboto Slab", "Voyage Fantastique ","Advent Pro", G
     @include flex(1);
     position: relative;
 }
-.block { display: block; }
+.block {
+    display: block;
+}
 #Container .mix {
     display: none;
 }
@@ -133,6 +135,7 @@ nav li:hover .dropdown-menu {
         .flex-prev {
             left: 20px !important;
             opacity: 1 !important;
+            z-index: 1;
             &:before {
                 content: '\f053';
             }
@@ -140,6 +143,7 @@ nav li:hover .dropdown-menu {
         .flex-next {
             right: 20px !important;
             opacity: 1 !important;
+            z-index: 1;
             &:before {
                 content: '\f054';
             }
@@ -384,9 +388,19 @@ h6 {
 //   margin-top: 26px;
 //   margin-bottom: 26px;
 // }
-.map {
+.get-map {
     margin-top: 5px;
-    pointer-events: none;
+    .map-marker {
+      width: 100%;
+      height: 500px;
+    }
+    #map {
+      width: 100%;
+      height: 500px;
+      img {
+        opacity: 1;
+      }
+    }
 }
 .fact-li {
     padding-left: 16px;
@@ -678,6 +692,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1;
 }
 #footer {
     color: #d5d6d8;
@@ -760,11 +775,14 @@ img.fancybox-image {
     }
 }
 .rti-mov {
+  li{a{
+    color: #e31e24;
+  }}
     ul {
         padding: 0;
         list-style: none;
         li {
-            padding: 5px 0;
+            margin-bottom: 5px;
         }
     }
 }
@@ -797,8 +815,8 @@ img.fancybox-image {
 .cont-box1 {
     border: 1px solid #000;
     padding: 15px;
-
 }
+
 .vwmore {
     .btn-link:focus,
     .btn-link:hover {
@@ -995,7 +1013,7 @@ img.fancybox-image {
     border-bottom: 1px solid #333;
 }
 .mgt-45 {
-    margin-top: 45px;
+    margin-top: 28px;
 }
 .rti-det {
     a {
@@ -1008,11 +1026,77 @@ img.fancybox-image {
         }
     }
 }
-.s-story{
-
-  padding: 5px;
+.s-story {
+    padding: 10px;
 }
-.s-story1{
-  border-bottom: 1px solid black;
+.s-story1 {
+    border-bottom: 1px solid #333;
+    margin: 0;
+}
+.tab-eff {
+    tbody > tr > td {
+        border-top: 0;
+    }
+    td {
+        background-color: #fff;
+        a {
+            color: #333;
+            cursor: pointer;
+        }
+    }
+    td:hover {
+        background-color: #ff7111;
+        a {
+            color: #fff;
+        }
+    }
+}
+.sel-year {
+    select {
+        border-radius: 4px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        margin: 5px;
+    }
+    select:focus {
+        outline: none;
+    }
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.close {
+    margin-top: -4px;
+}
+.s-story2 {
+    margin-bottom: 10px;
+}
+.link-col{
+  a{
+    color: #e31e24;
+  }
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    margin-bottom: 5px;
+  }
+  .btn-clr{
+    color: #333;
+  }
+}
+.mon-col{
+  a{
+    color: #e31e24;
+  }
+}
+.vwmore .btn-link:focus, .vwmore .btn-link:hover {
+    text-decoration: underline;
+    outline: none;
+    color: #a11418;
+}
+.btn-pos{
+  margin-top: 49px;
 }
 @import "mobile_raj";
