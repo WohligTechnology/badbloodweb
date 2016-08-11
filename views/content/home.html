@@ -5,7 +5,7 @@
                 <img ng-src="{{s}}" class="img-responsive">
             </li>
         </flex-slider> -->
-        <flex-slider flex-slide="s in mySlides">
+        <flex-slider flex-slide="s in mySlides" class="hide">
             <li>
                 <img ng-src="{{s|uploadpath}}" class="img-responsive">
             </li>
@@ -39,10 +39,11 @@
                                     <img src="img/user146.png" class="img-responsive">
                                 </div>
                                 <div class="num">
-                                    <span class="fact-number" data-to="1024" data-speed="1500">27972</span>
+                                    <span class="fact-number" data-to="1024" data-speed="1500" count-to="27972" value="0" duration="1">27972</span>
+                                    <!-- <span class="fact-number" count-to="{{27972}}" duration="4" count-from="{{0}}"></span> -->
                                 </div>
                                 <div class="desc">
-                                    <span class="lead">Number of Donors</span>
+                                    <span class="lead">Number 27972of Donors</span>
                                 </div>
                             </div>
                         </div>
