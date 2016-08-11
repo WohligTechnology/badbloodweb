@@ -1,6 +1,6 @@
 var initMap = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'angular-flexslider', 'duScroll', 'ngAnimate'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'angular-flexslider', 'duScroll', 'ngAnimate', 'countTo'])
     .controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $stateParams, $location, $timeout, $document) {
         // $scope.$on('$viewContentLoaded', function(event) {
         //     setTimeout(function() {
