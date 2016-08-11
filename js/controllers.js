@@ -159,7 +159,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 center: {
                     lat: 18.9354153,
                     lng: 72.8341888
-                }
+                },
+                scrollwheel: false
             });
 
             var contentString = '<div id="content">' +
