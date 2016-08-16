@@ -209,29 +209,34 @@ h6 {
     }
 }
 .social-icons {
-    padding-left: 20px;
+    // padding-left: 20px;
     a {
         color: $white;
-        line-height: 40px;
+        line-height: 52px;
         display: inline-block;
-        width: 51px;
+        width: 50px;
+        height: 50px;
         text-align: center;
-        @include transition(all .1s ease-in-out );
-        &:hover {
-            background: $brand-primary;
+        .fa {
+            font-size: 20px;
         }
+        @include transition(all .1s ease-in-out );
+        // &:hover {
+        //     background: $brand-primary;
+        // }
     }
 }
 #header {
-    background: linear-gradient(#ff6a06,rgba(255, 155, 88, 1));
+    background: linear-gradient(#ff6a06,#ffc39b);
     font-family: 'Roboto Slab', sans-serif;
     // border-color: #2E303C;
 }
 .logo {
-    height: 60px;
+    height: 80px;
     overflow: hidden;
     display: block;
     padding: 5px 0;
+    margin-top: 18px;
     img {
         max-height: 100%;
         max-width: 100%;
@@ -678,6 +683,7 @@ li.brand {
     padding: 10px 0;
     p {
         margin: 0;
+        text-align: right;
     }
 }
 .sub-footer a {
@@ -700,7 +706,7 @@ footer {
 }
 #footer {
     color: #d5d6d8;
-    background: linear-gradient(rgba(60,176,114,1),#019847);
+    background: linear-gradient(#99d5b5,#019847);
     border-bottom: 4px solid $brand-primary$brand-primary;
 }
 .footer-widgets {
@@ -751,8 +757,8 @@ label {
     margin-bottom: 30px;
 }
 .mt83 {
-    margin-top: 83px;
-    margin-bottom: 83px;
+    margin-top: 115px;
+    margin-bottom: 50px;
 }
 img.fancybox-image {
     opacity: 1;
@@ -865,7 +871,9 @@ img.fancybox-image {
             color: #333;
             text-decoration: underline;
             &:hover {
-                opacity: 0.8;
+                text-decoration: underline;
+                outline: none;
+                color: #a11418;
             }
         }
     }
@@ -940,6 +948,13 @@ img.fancybox-image {
 }
 .navbar-header {
     float: none;
+    position: relative;
+}
+.sideimg {
+    position: absolute;
+    height: 120px;
+    top: 18%;
+    left: 2%;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -1027,7 +1042,9 @@ img.fancybox-image {
         color: #333;
         text-decoration: none;
         &:hover {
-            opacity: 0.8;
+            text-decoration: underline;
+            outline: none;
+            color: #a11418;
         }
     }
 }
@@ -1111,23 +1128,47 @@ img.fancybox-image {
 .btn-fit {
     margin-top: 10px;
 }
-.pd-10{
-  padding: 0 10px;
+.pd-10 {
+    padding: 0 10px;
 }
-.modal-body .respect{
-  margin: 0;
-  padding: 0 10px;
+.modal-body .respect {
+    margin: 0;
+    padding: 0 10px;
 }
-.mgt-5{
-  margin-top: 5px;
+.mgt-5 {
+    margin-top: 5px;
 }
 .modal-body .respect2 {
-  margin: 0;
+    margin: 0;
 }
-.pd0{
-  padding: 0;
+.pd0 {
+    padding: 0;
 }
 .mgt-5 .fit {
     width: 97%;
+}
+.social-head {
+    position: absolute;
+    top: 20%;
+    right: -40px;
+}
+.social-icons a:hover {
+    background: $brand-primary;
+    border-radius: 50%;
+}
+.gall-det {
+    color: #000080;
+}
+.activity-info {
+    color: #393185;
+}
+ .event {
+    color: #393185;
+}
+.contact-form {
+    color: #000080;
+}
+.text-field{
+  color: #393185;
 }
 @import "mobile_raj";
