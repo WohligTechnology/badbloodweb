@@ -631,7 +631,59 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.transId = $stateParams.id;
 
 })
-
+.controller('footerctrl', function($scope, TemplateService, NavigationService) {
+    $scope.template = TemplateService;
+    $scope.record = [{
+        count: "27972",
+        number: "No of Donors"
+    }, {
+      count: "127391",
+      number: "No of Blood Bottles"
+    },{
+      count: "87",
+      number: "No of Blood Camp"
+    }];
+    $scope.record1 = [{
+        count: "37",
+        number: "Mobile Eye Collection Centres"
+    }, {
+      count: "250+",
+      number: "Doctor's and Socail Worker"
+    },{
+      count: "14902",
+      number: "No of Eye Balls Collected"
+    }];
+    $scope.record2 = [{
+        count: "7",
+        number: "Centres"
+    }, {
+      count: "890",
+      number: "In 2016 Students took benefit"
+    },{
+      count: "35000+",
+      number: "Students Benefited"
+    }];
+    $scope.record3 = [{
+        count: "11",
+        number: "Centres"
+    }, {
+      count: "80+",
+      number: "Professionals"
+    },{
+      count: "7000+",
+      number: "RTI Applications"
+    }];
+    $scope.record4 = [{
+        count: "4",
+        number: "Hospitals"
+    }, {
+      count: "50+",
+      number: "Social Workers working 365 days"
+    },{
+      count: "1000",
+      number: "Patient/Relatives take benefit-Daily"
+    }];
+  })
 .controller('headerctrl', function($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, $stateParams, $location, $timeout, $document) {

@@ -1,6 +1,95 @@
 <footer>
-    <div id="footer" ng-controller="headerctrl">
-
+    <div id="footer"  ng-controller="footerctrl">
+      <!-- <div class="container">
+        <div class="text-center">
+          <div class="row-flex">
+            <div class="col-flex"><img src="img/TMM Blood Logo.png" alt="" class="img-responsive"></div>
+            <div class="col-flex"><img src="img/TMM Blood Logo.png" alt="" class="img-responsive"></div>
+            <div class="col-flex"><img src="img/TMM Blood Logo.png" alt="" class="img-responsive"></div>
+            <div class="col-flex"><img src="img/TMM Blood Logo.png" alt="" class="img-responsive"></div>
+            <div class="col-flex"><img src="img/TMM Blood Logo.png" alt="" class="img-responsive"></div>
+          </div>
+        </div>
+      </div> -->
+<div class="container">
+<div class="row-flex">
+<div class="col-flex slider-set">
+  <div class="records text-center">
+    <div class="sec-img">
+      <img src="img/TMM Blood Logo.png" alt="">
+    </div>
+      <flex-slider flex-slide="item in record track by $index" animation="slide" animationloop="true">
+          <li>
+              <div class="text-center">
+                  <h4>{{item.count}}</h4>
+            <span>{{item.number}}</span>
+            </div>
+          </li>
+          </flexi-slider>
+  </div>
+</div>
+<div class="col-flex slider-set">
+  <div class="records text-center">
+    <div class="sec-img">
+      <img src="img/TMM Blood Logo.png" alt="">
+    </div>
+      <flex-slider flex-slide="item in record1 track by $index" animation="slide" animationloop="true">
+          <li>
+              <div class="text-center">
+                  <h4>{{item.count}}</h4>
+            <span>{{item.number}}</span>
+            </div>
+          </li>
+          </flexi-slider>
+  </div>
+</div>
+<div class="col-flex slider-set">
+  <div class="records text-center">
+    <div class="sec-img">
+      <img src="img/TMM Blood Logo.png" alt="">
+    </div>
+      <flex-slider flex-slide="item in record2 track by $index" animation="slide" animationloop="true">
+          <li>
+              <div class="text-center">
+                  <h4>{{item.count}}</h4>
+            <span>{{item.number}}</span>
+            </div>
+          </li>
+          </flexi-slider>
+  </div>
+</div>
+<div class="col-flex slider-set">
+  <div class="records text-center">
+    <div class="sec-img">
+      <img src="img/TMM Blood Logo.png" alt="">
+    </div>
+      <flex-slider flex-slide="item in record3 track by $index" animation="slide" animationloop="true">
+          <li>
+              <div class="text-center">
+                  <h4>{{item.count}}</h4>
+            <span>{{item.number}}</span>
+            </div>
+          </li>
+          </flexi-slider>
+  </div>
+</div>
+<div class="col-flex slider-set">
+  <div class="records text-center">
+    <div class="sec-img">
+      <img src="img/TMM Blood Logo.png" alt="">
+    </div>
+      <flex-slider flex-slide="item in record4 track by $index" animation="slide" animationloop="true">
+          <li>
+              <div class="text-center">
+                  <h4>{{item.count}}</h4>
+            <span>{{item.number}}</span>
+            </div>
+          </li>
+          </flexi-slider>
+  </div>
+</div>
+</div>
+</div>
         <!-- Footer widgets Container -->
         <!-- <div class="footer-widgets">
          <div class="container">

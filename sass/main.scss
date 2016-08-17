@@ -216,6 +216,7 @@ h6 {
         display: inline-block;
         width: 50px;
         height: 50px;
+        border-radius: 50%;
         text-align: center;
         .fa {
             font-size: 20px;
@@ -680,10 +681,9 @@ li.brand {
     color: #fff;
 }
 .copyright {
-    padding: 10px 0;
+    padding: 5px 0;
     p {
         margin: 0;
-        text-align: right;
     }
 }
 .sub-footer a {
@@ -987,7 +987,7 @@ img.fancybox-image {
     margin-top: 30px;
 }
 .mt-111 {
-    margin-top: 111px;
+    margin-top: 148px;
 }
 .mb-50 {
     margin-bottom: 105px;
@@ -998,7 +998,7 @@ img.fancybox-image {
     }
 }
 .flexslider .slides img {
-    height: 461px;
+    height: 274px;
 }
 .dropdown-menu > li:hover {
     text-decoration: none;
@@ -1013,7 +1013,7 @@ img.fancybox-image {
     margin-bottom: 115px;
 }
 .flexslider .flex-direction-nav a:before {
-    color: blue;
+    color: #000080;
 }
 .btn-member {
     // border: 1px solid #e31e24;
@@ -1162,13 +1162,66 @@ img.fancybox-image {
 .activity-info {
     color: #393185;
 }
- .event {
+.event {
     color: #393185;
 }
 .contact-form {
     color: #000080;
 }
-.text-field{
-  color: #393185;
+.text-field {
+    color: #393185;
+}
+.records {
+    .flexslider {
+        background: none;
+    }
+    .sec-img {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        img {
+            height: 100px;
+        }
+    }
+    h4 {
+        font-size: 18px;
+        color: #fff;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .flex-control-paging li a {
+        width: 8px;
+        height: 8px;
+    }
+    span {
+        font-size: 14px;
+        color: #fff;
+    }
+    li {
+        height: 88px;
+    }
+    .flex-direction-nav {
+        display: none;
+    }
+    .flex-control-nav {
+        display: block;
+        bottom: -10px;
+    }
+    .flex-control-nav li {
+        height: auto !important;
+    }
+    .flex-control-paging li a {
+        background: #fff;
+    }
+    .flex-control-paging li a.flex-active {
+        background: #31708f;
+        cursor: default;
+    }
+}
+.slider-set+.slider-set {
+    border-left: 1px solid #fff;
+    margin-top: 5px;
+}
+.mt0{
+  margin-top: 0;
 }
 @import "mobile_raj";
