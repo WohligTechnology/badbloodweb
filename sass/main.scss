@@ -997,9 +997,6 @@ img.fancybox-image {
         position: static!important;
     }
 }
-.flexslider .slides img {
-    height: 274px;
-}
 .dropdown-menu > li:hover {
     text-decoration: none;
     color: #262626;
@@ -1224,4 +1221,15 @@ img.fancybox-image {
 .mt0{
   margin-top: 0;
 }
+// home
+.home-slider {
+  .flexslider .flex-direction-nav a {
+    top: 45%;
+    @include transform(translateY(-50%));
+  }
+  // .flexslider .slides img {
+  //     height: 274px;
+  // }
+}
+// home end
 @import "mobile_raj";
