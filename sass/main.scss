@@ -758,8 +758,9 @@ label {
 }
 .mt83 {
     margin-top: 115px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
+
 img.fancybox-image {
     opacity: 1;
 }
@@ -777,13 +778,13 @@ img.fancybox-image {
         margin-top: 57px;
     }
 }
-.mt83 {
-    .rti-banner {
-        img {
-            margin-top: -26px;
-        }
-    }
-}
+// .mt83 {
+    // .rti-banner {
+    //     img {
+    //         margin-top: -26px;
+    //     }
+    // }
+// }
 .rti-mov {
     li {
         a {
@@ -968,6 +969,7 @@ img.fancybox-image {
 .glry {
     margin-bottom: 30px;
     position: relative;
+    cursor: pointer;
 }
 .name-sec {
     position: absolute;
@@ -1182,8 +1184,8 @@ img.fancybox-image {
     h4 {
         font-size: 18px;
         color: #fff;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
     .flex-control-paging li a {
         width: 8px;
@@ -1194,7 +1196,7 @@ img.fancybox-image {
         color: #fff;
     }
     li {
-        height: 88px;
+        height: 56px;
     }
     .flex-direction-nav {
         display: none;
@@ -1233,6 +1235,9 @@ img.fancybox-image {
 }
 .pdt4{
   padding-top: 4px;
+}
+.mt180{
+  margin-top: 180px;
 }
 // home end
 @import "mobile_raj";
