@@ -1,5 +1,3 @@
-var initMap = {};
-
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'angular-flexslider', 'duScroll', 'ngAnimate'])
     .controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $stateParams, $location, $timeout, $document) {
         // $scope.$on('$viewContentLoaded', function(event) {
@@ -18,7 +16,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-
 
         function makeAnimation(id) {
             if (_.isEmpty(id)) {
@@ -44,13 +41,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             makeAnimation(id);
             $location.replace();
         };
-        // $scope.mySliders = [
-        //     'img/s1.jpg',
-        //     'img/s2.jpg',
-        //     'img/s3.jpg',
-        //     'img/s4.jpg',
-        //     'img/s5.jpg'
-        // ];
+        $scope.mySliders = [
+            'img/s1.jpg',
+            'img/s2.jpg',
+            'img/s3.jpg',
+            'img/s4.jpg',
+            'img/s5.jpg'
+        ];
         $scope.mySlides = [];
         NavigationService.getSlide(function(data) {
             console.log(data);
@@ -142,364 +139,54 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("rti");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "RTI";
+        $scope.menutitle = NavigationService.makeactive("Rti");
+        TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-
-        // google map
-        initMap = function() {
-
-            //   var tmmMapping = [
-            //     {
-            //
-            //   },
-            // ];
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: {
-                    lat: 18.9354153,
-                    lng: 72.8341888
-                },
-                scrollwheel: false
-            });
-
-            var contentString = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">Fort</h3>' +
-                '<div id="bodyContent">' +
-                '<p>34, MARUTI LANE, RATNADEEP, 1ST FLOOR, NEAR OLD HANDLOOM HOUSE, FORT, MUMBAI – 400001' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp;TUESDAY <b>  &nbsp;&nbsp;EVENING TIME:</b>  &nbsp;6.30 PM – 8.30 PM</p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b>KANTILAL SHAH</b> - 9819334623 &nbsp; &nbsp;<b>ANANT NANDU</b> - 9320877377</p>' +
-                '</div>' +
-                '</div>';
-            var contentString1 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">CHINCHPOKLI </h3>' +
-                '<div id="bodyContent">' +
-                '<p>TARUN MITRA MANDAL OFFICE, SHREE K.V.O. STHA. JAIN MAHAJAN SANKUL, DR AMBEDKER RD, OPP VOLTAS, CHINCHPOKLI, MUMBAI - 40001' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp;SUNDAY <b>  &nbsp;&nbsp;MORNING TIME:</b>  &nbsp;10 AM – 12 NOON</p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b>MANOJ PAREKH</b> - 9820647337 &nbsp; &nbsp;<b>SHAILESH GALA</b> - 9967448191</p>' +
-                '</div>' +
-                '</div>';
-            var contentString2 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">DADAR-W </h3>' +
-                '<div id="bodyContent">' +
-                '<p>SHREE VARDHMAN STHA. JAIN SHRAVAK SANGH,  SHREE KARSAN LADHU NISAR HALL, 12, GYAN MANDIR RD, OFF S.K. BOLE RD, DADAR (W), MUMBAI – 400028' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp;SUNDAY <b>  &nbsp;&nbsp;MORNING TIME:</b>  &nbsp; 9.30 AM – 12.30PM</p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b>MAHENDRA DHAROD </b>  - 9869429543  &nbsp; &nbsp;<b>ASHOK CHHEDA </b> - 9819481666 </p>' +
-                '</div>' +
-                '</div>';
-            var contentString3 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">MATUNGA – C.R. </h3>' +
-                '<div id="bodyContent">' +
-                '<p>SHREE GUJARATI SEVA MANDAL,  OPP. SHANKAR MATTHAM, TELANG ROAD, MATUNGA (C.R.), MUMBAI – 400019 ' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp;SUNDAY <b>  &nbsp;&nbsp;MORNING TIME:</b>  &nbsp;  10 AM – 12 NOON</p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b>MANILAL NANDU </b> - 9987052153   &nbsp; &nbsp;<b>KIRAN CHHEDA </b> - 9222418251  </p>' +
-                '</div>' +
-                '</div>';
-            var contentString4 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">GHATKOPAR</h3>' +
-                '<div id="bodyContent">' +
-                '<p>SHREE AKHIL GHATKOPAR VYAPARI MANDAL OFFICE, NAVNEET VIHAR, BEHIND GANDHI MARKET, M.G.ROAD, GHATKOPAR (E), MUMBAI - 400077' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp; WEDNESDAY<b>  &nbsp;&nbsp;NIGHT TIME:</b>  &nbsp; 7.30 PM – 9.30 PM</p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b> MANAHAR SANGOI</b> - 9221046686   &nbsp; &nbsp;<b>MAHENDRA BHANUSHALI</b> - 9619393770  </p>' +
-                '</div>' +
-                '</div>';
-            var contentString5 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">MULUND</h3>' +
-                '<div id="bodyContent">' +
-                '<p>MANAV JYOT CHARITABLE TRUST,  NITYANAND APT., DR. RAJENDRA PRASAD RD, MULUND (W), MUMBAI - 400080' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp; SUNDAY<b>  &nbsp;&nbsp;MORNING TIME:</b>  &nbsp;  10.30 AM – 12.30 PM </p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b>  NAYAN GANGAR </b> - 9820341582   &nbsp; &nbsp;<b> SURESH GALA</b> - 9321106741</p>' +
-                '</div>' +
-                '</div>';
-            var contentString6 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">THANE </h3>' +
-                '<div id="bodyContent">' +
-                '<p>SHRI RISHABH AJIT BHAKTAMAR JINALAY,  2ND FLOOR, RAM MARUTI CROSS ROAD NO. 1, NAUPADA, THANE (W) – 400602' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp; SUNDAY<b>  &nbsp;&nbsp;MORNING TIME:</b>  &nbsp;  11 AM – 1 PM </p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b> RAJEN DHAROD </b> - 9820535271      &nbsp; &nbsp;<b>RAHUL VADHAN</b> - 9892298007</p>' +
-                '</div>' +
-                '</div>';
-            var contentString7 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">SANTACRUZ</h3>' +
-                '<div id="bodyContent">' +
-                '<p>GAMI ASSOCIATES 615, SAI CHAMBERS, 6TH FLOOR, BEHIND BEST DEPOT, SANTACRUZ (E), MUMBAI - 400055' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp;MONDAY <b>  &nbsp;&nbsp;EVENING TIME:</b>  &nbsp;  6 PM – 8 PM </p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b>NIMISH GAMI </b> - 9820844025      &nbsp; &nbsp;<b>RUPA GAMI </b> - 9820198445</p>' +
-                '</div>' +
-                '</div>';
-            var contentString8 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">ANDHERI</h3>' +
-                '<div id="bodyContent">' +
-                '<p>JEEL HOLIDAYS, 316, S.V. ROAD, AMBOLI NAKA,,  NEAR RAILWAY CROSSING, OPP. SNEHANJALI, ANDHERI (W), MUMBAI - 400058 ' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp; SATURDAY<b>  &nbsp;&nbsp;MORNING TIME:</b>  &nbsp;9.30 AM – 11.30 AM </p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b> RASIK POLADIA </b> - 9969520092      &nbsp; &nbsp;<b> JANAK GALA </b> - 9819674670 </p>' +
-                '</div>' +
-                '</div>';
-            var contentString9 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">MALAD</h3>' +
-                '<div id="bodyContent">' +
-                '<p>SHREE MALAD KUTCHI JAIN YUVAK SAMAJ,  3-MAMLATDARWADI ROAD, ROAD NO.3, OPP. KADIAWADI, MALAD (W), MUMBAI – 400064 ' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp; SATURDAY<b>  &nbsp;&nbsp; NIGHT TIME:</b>  &nbsp; 7.30 PM – 9.30 PM </p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b> AMIT SHAH </b> - 9869414836      &nbsp; &nbsp;<b> PRAFFUL SHAH </b> - 9321014488  </p>' +
-                '</div>' +
-                '</div>';
-            var contentString10 = '<div id="content">' +
-                '<h3 id="firstHeading" class="firstHeading">BORIVALI</h3>' +
-                '<div id="bodyContent">' +
-                '<p>BORIVALI K.V.O. JAIN MAHAJAN, 1, MANGAL KUNJ, WING–I, JAMBLI GALLI, OPP. INDRAPRASTH SHOPPING CENTRE, BORIVALI (W), MUMBAI – 400092 ' +
-                '</p>' +
-                '<p><b>DAY:</b> &nbsp; FRIDAY<b>  &nbsp;&nbsp; NIGHT TIME:</b>  &nbsp;  8 PM – 10 PM </p>' +
-                '<p><b>CONTACT:</b> &nbsp;<b> NITIN SHAH </b> - 9322266593 (Call Sat 7pm – 9 pm)  &nbsp; &nbsp;<b>SATISH SHAH </b>  - 9833417461  </p>' +
-                '</div>' +
-                '</div>';
-
-
-            function createMarker(data, title, content) {
-                var infowindow = new google.maps.InfoWindow({
-                    content: content
-                });
-                var marker = new google.maps.Marker({
-                    position: data,
-                    map: map,
-                    title: title
-                });
-                marker.addListener('click', function() {
-                    infowindow.open(map, marker);
-                });
-            }
-            createMarker({
-                lat: 18.9354153,
-                lng: 72.8341888
-            }, 'Fort', contentString);
-            createMarker({
-                lat: 18.9870263,
-                lng: 72.8342918
-            }, 'Chinchpokli', contentString1);
-            createMarker({
-                lat: 18.987025,
-                lng: 72.834839
-            }, 'Dadar', contentString2);
-            createMarker({
-                lat: 19.028824,
-                lng: 72.85312
-            }, 'Matunga', contentString3);
-            createMarker({
-                lat: 19.0806413,
-                lng: 72.9034026
-            }, 'Ghatkopar', contentString4);
-            createMarker({
-                lat: 19.1786981,
-                lng: 72.9493703
-            }, 'Mulund', contentString5);
-            createMarker({
-                lat: 19.1889316,
-                lng: 72.9727391
-            }, 'Thane', contentString6);
-            createMarker({
-                lat: 19.081925,
-                lng: 72.842487
-            }, 'Santacruz', contentString7);
-            createMarker({
-                lat: 19.1283895,
-                lng: 72.8470374
-            }, 'Andheri', contentString8);
-            createMarker({
-                lat: 19.1886626,
-                lng: 72.8439792
-            }, 'Malad', contentString9);
-            createMarker({
-                lat: 19.226759,
-                lng: 72.855047
-            }, 'Borivali', contentString10);
-
-        };
-        setTimeout(function() {
-            initMap();
-        }, 100);
-        // google map end
         $scope.status = {
             isFirstOpen: true
         };
-        $scope.openList = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/storymonth.html',
-                // controller: "RtiCtrl"
-                scope: $scope
-            });
-        };
-        $scope.openStory = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/success.html',
-                // controller: "RtiCtrl"
-                scope: $scope
-            });
-        };
-        $scope.openAppform = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/apptemp.html',
-                // controller: "RtiCtrl"
-                scope: $scope
-            });
-        };
-        $scope.openIndappeal = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/indappeal.html',
-                // controller: "RtiCtrl"
-                scope: $scope
-            });
-        };
-        $scope.openAppeal = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/appeal.html',
-                // controller: "RtiCtrl"
-                scope: $scope
-            });
-        };
-        $scope.open = function() {
-            var modalInstance = $uibModal.open({
-                templateUrl: 'views/modal/mapplication.html',
-                controller: 'RtiCtrl',
-            });
-        };
-        $scope.open1 = function() {
-            var modalInstance = $uibModal.open({
-                templateUrl: 'views/modal/mfirstappeal.html',
-                controller: 'RtiCtrl',
-            });
-        };
-        $scope.open2 = function() {
-            var modalInstance = $uibModal.open({
-                templateUrl: 'views/modal/msecondappeal.html',
-                controller: 'RtiCtrl',
-            });
-        };
-        $scope.open3 = function() {
-            var modalInstance = $uibModal.open({
-                templateUrl: 'views/modal/capplication.html',
-                controller: 'RtiCtrl',
-            });
-        };
-        $scope.open4 = function() {
-            var modalInstance = $uibModal.open({
-                templateUrl: 'views/modal/cfirstappeal.html',
-                controller: 'RtiCtrl',
-            });
-        };
-        $scope.open5 = function() {
-            var modalInstance = $uibModal.open({
-                templateUrl: 'views/modal/csecondappeal.html',
-                controller: 'RtiCtrl',
-            });
-        };
+        $scope.open = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/mapplication.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open1 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/mfirstappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open2 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/msecondappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open3 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/capplication.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open4 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/cfirstappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
+        $scope.open5 = function () {
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal/csecondappeal.html',
+      controller: 'RtiCtrl',
+    });
+  };
 
     })
     .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("about");
-        $scope.menutitle = NavigationService.makeactive("About Us");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('EventCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("event");
-        $scope.menutitle = NavigationService.makeactive("Event");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('ManavbloodCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("manavblood");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "Manav Blood";
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('BookbankCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("bookbank");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "Book Bank";
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('LectureseriesCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("lectureseries");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "Lecture Series";
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('FeedhungryCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("feedhungry");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "Feed The Hungry";
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('YuvrajmovementCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("yuvrajmovement");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "Yuvraj Eye Donation Movement";
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('SakshamtaabhiyanCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("sakshamtaabhiyan");
-        $scope.menutitle = NavigationService.makeactive("Activity");
-        TemplateService.title = "Sakshamta Abhiyan";
-        $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
-            console.log(id);
-            $location.path("" + id);
-        };
-    })
-    .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("contact");
-        $scope.menutitle = NavigationService.makeactive("Contact Us");
+        $scope.menutitle = NavigationService.makeactive("About");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.changeURL = function(id) {
@@ -530,30 +217,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
-        // $scope.gall = [];
-        // NavigationService.getGall(function(data) {
-        //     console.log(data);
-        //     $scope.gall = data.images;
-        // });
-        $scope.gall = [{
-            img: "img/gallery1.jpg"
-        }, {
-            img: "img/gallery2.jpg"
-        }, {
-            img: "img/gallery3.jpg"
-        }, {
-            img: "img/gallery4.jpg"
-        }, {
-            img: "img/gallery1.jpg"
-        }, {
-            img: "img/gallery2.jpg"
-        }, {
-            img: "img/gallery3.jpg"
-        }, {
-            img: "img/gallery4.jpg"
-        }, {
-            img: "img/gallery1.jpg"
-        }];
+        $scope.gall = [];
+        NavigationService.getGall(function(data) {
+            console.log(data);
+            $scope.gall = data.images;
+        });
+        // $scope.gall = [{
+        //   img: "img/gallery1.jpg"
+        // }, {
+        //   img: "img/gallery2.jpg"
+        // }, {
+        //   img: "img/gallery3.jpg"
+        // }, {
+        //   img: "img/gallery4.jpg"
+        // }, {
+        //   img: "img/gallery1.jpg"
+        // }, {
+        //   img: "img/gallery2.jpg"
+        // }, {
+        //   img: "img/gallery3.jpg"
+        // }, {
+        //   img: "img/gallery4.jpg"
+        // }, {
+        //   img: "img/gallery1.jpg"
+        // }];
 
     })
 
@@ -631,59 +318,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.transId = $stateParams.id;
 
 })
-.controller('footerctrl', function($scope, TemplateService, NavigationService) {
-    $scope.template = TemplateService;
-    $scope.record = [{
-        count: "27972",
-        number: "No of Donors"
-    }, {
-      count: "127391",
-      number: "No of Blood Bottles"
-    },{
-      count: "87",
-      number: "No of Blood Camp"
-    }];
-    $scope.record1 = [{
-        count: "37",
-        number: "Mobile Eye Collection Centres"
-    }, {
-      count: "250+",
-      number: "Doctor's and Socail Worker"
-    },{
-      count: "14902",
-      number: "No of Eye Balls Collected"
-    }];
-    $scope.record2 = [{
-        count: "7",
-        number: "Centres"
-    }, {
-      count: "890",
-      number: "In 2016 Students took benefit"
-    },{
-      count: "35000+",
-      number: "Students Benefited"
-    }];
-    $scope.record3 = [{
-        count: "11",
-        number: "Centres"
-    }, {
-      count: "80+",
-      number: "Professionals"
-    },{
-      count: "7000+",
-      number: "RTI Applications"
-    }];
-    $scope.record4 = [{
-        count: "4",
-        number: "Hospitals"
-    }, {
-      count: "50+",
-      number: "Social Workers working 365 days"
-    },{
-      count: "1000",
-      number: "Patient/Relatives take benefit-Daily"
-    }];
-  })
+
 .controller('headerctrl', function($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, $stateParams, $location, $timeout, $document) {
@@ -696,7 +331,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.subscribeNow($scope.subscribe, function(data) {
             console.log(data);
             $scope.showThanks = true;
-        });
-    };
+        })
+    }
 
 });
