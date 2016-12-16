@@ -262,7 +262,7 @@ h6 {
 }
 
 .logo {
-    height: 110px;
+    height: 90px;
     overflow: hidden;
     display: block;
     padding: 5px 0;
@@ -299,7 +299,7 @@ h6 {
 }
 
 .nav-top {
-    padding-top: 38px;
+    padding-top: 30px;
 }
 
 .btn-donate {
@@ -315,7 +315,7 @@ h6 {
 }
 
 .slider {
-    margin-top: 83px;
+    margin-top: 73px;
 }
 
 .block-title {
@@ -960,6 +960,9 @@ img.fancybox-image {
 .modal-footer {
     border: 0;
     text-align: center;
+}
+.mar-left-15{
+    margin-left: 15px;
 }
 
 @import "mobile_raj";
