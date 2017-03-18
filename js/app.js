@@ -6,7 +6,7 @@ var firstapp = angular.module('firstapp', [
     'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
@@ -47,6 +47,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
             url: "/activity",
             templateUrl: "views/template.html",
             controller: 'ActivityCtrl'
+        })
+        .state('storymaker', {
+            url: "/storymaker",
+            templateUrl: "views/template.html",
+            controller: 'StoryMakerCtrl'
         })
         .state('manavblood', {
             url: "/manavblood",
@@ -108,37 +113,37 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
 });
 
-firstapp.directive('container', function() {
+firstapp.directive('container', function () {
     return {
         restrict: 'C',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             $('#Container').mixItUp();
         }
     };
 });
 
-firstapp.directive('autoHeight', function($compile, $parse) {
+firstapp.directive('autoHeight', function ($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
             var windowHeight = $(window).height();
 
             $element.css("min-height", windowHeight);
-            setTimeout(function() {
+            setTimeout(function () {
                 $element.css("min-height", windowHeight);
             });
         }
     };
 });
 
-firstapp.directive('fancyboxThumb', function() {
+firstapp.directive('fancyboxThumb', function () {
     return {
         restrict: 'C',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
 
             $('.fancybox-thumb').fancybox({
                 prevEffect: 'none',
@@ -158,8 +163,8 @@ firstapp.directive('fancyboxThumb', function() {
         }
     };
 });
-firstapp.filter('thumbimage', function() {
-    return function(input) {
+firstapp.filter('thumbimage', function () {
+    return function (input) {
         if (input) {
             return adminurl + 'image/index?name=' + input + '&width=400';
         } else {
@@ -167,27 +172,27 @@ firstapp.filter('thumbimage', function() {
         }
     };
 });
-firstapp.filter('uploadpath', function() {
-    return function(input) {
+firstapp.filter('uploadpath', function () {
+    return function (input) {
         return adminurl + "uploadfile/resize?file=" + input + "&height=200";
     };
 });
-firstapp.filter('uploadpathforfancy', function() {
-    return function(input) {
+firstapp.filter('uploadpathforfancy', function () {
+    return function (input) {
         if (input)
             return adminurl + "uploadfile/resize?file=" + input;
     };
 });
-firstapp.directive('img', function($compile, $parse) {
+firstapp.directive('img', function ($compile, $parse) {
     return {
         restrict: 'E',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
             if (!attrs.noloading) {
                 $element.after("<img src='img/loading.gif' class='loading' />");
                 var $loading = $element.next(".loading");
-                $element.load(function() {
+                $element.load(function () {
                     $loading.remove();
                     $(this).addClass("doneLoading");
                 });
@@ -221,7 +226,7 @@ firstapp.directive('img', function($compile, $parse) {
 //     };
 // });
 
-$(document).ready(function() {
+$(document).ready(function () {
     $(".various").fancybox({
         maxWidth: 800,
         maxHeight: 600,

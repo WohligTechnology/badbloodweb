@@ -1,7 +1,7 @@
 var initMap = {};
 
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'angular-flexslider', 'duScroll', 'ngAnimate'])
-    .controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $stateParams, $location, $timeout, $document) {
+    .controller('HomeCtrl', function ($scope, $state, TemplateService, NavigationService, $stateParams, $location, $timeout, $document) {
         // $scope.$on('$viewContentLoaded', function(event) {
         //     setTimeout(function() {
         //         makeAnimation($stateParams.id);
@@ -28,14 +28,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $document.scrollToElement(someElement, 165, 1400);
         }
 
-        $scope.$on('$viewContentLoaded', function(event) {
-            setTimeout(function() {
+        $scope.$on('$viewContentLoaded', function (event) {
+            setTimeout(function () {
                 makeAnimation($stateParams.id);
             }, 500);
         });
 
 
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             $state.transitionTo('homeid', {
                 id: id
             }, {
@@ -44,20 +44,36 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             makeAnimation(id);
             $location.replace();
         };
-        // $scope.mySliders = [
-        //     'img/s1.jpg',
-        //     'img/s2.jpg',
-        //     'img/s3.jpg',
-        //     'img/s4.jpg',
-        //     'img/s5.jpg'
-        // ];
-        $scope.mySlides = [];
-        NavigationService.getSlide(function(data) {
-            console.log(data);
-            $scope.mySlides = data[0].image;
-        });
+        $scope.mySliders = [
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg',
+            'img/4.jpg',
+            'img/5.jpg',
+            'img/6.jpg',
+            'img/7.jpg',
+            'img/8.jpg',
+            'img/9.jpg',
+            'img/10.jpg',
+            'img/11.jpg',
+            'img/12.jpg',
+            'img/13.jpg',
+            'img/14.jpg',
+            'img/15.jpg',
+            'img/16.jpg',
+            'img/17.jpg',
+            'img/18.jpg',
+            'img/19.jpg',
+            'img/20.jpg',
+            'img/21.jpg'
+        ];
+        // $scope.mySlides = [];
+        // NavigationService.getSlide(function(data) {
+        //     console.log(data);
+        //     $scope.mySlides = data[0].image;
+        // });
         $scope.sponsor = [];
-        NavigationService.getSponser(function(data) {
+        NavigationService.getSponser(function (data) {
             console.log(data);
             if (data.value != false) {
                 $scope.sponsor = data;
@@ -74,7 +90,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //   'img/partner6.png'
         // ];
         $scope.gallery = [];
-        NavigationService.getGallery(function(data) {
+        NavigationService.getGallery(function (data) {
             console.log(data);
             $scope.gallery = data.images;
         });
@@ -133,13 +149,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
         $scope.event = [];
-        NavigationService.getEvent(function(data) {
+        NavigationService.getEvent(function (data) {
             console.log(data);
             $scope.event = data[0];
         });
 
     })
-    .controller('RtiCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    .controller('RtiCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("rti");
         $scope.menutitle = NavigationService.makeactive("Activity");
@@ -147,7 +163,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
         // google map
-        initMap = function() {
+        initMap = function () {
 
             //   var tmmMapping = [
             //     {
@@ -273,7 +289,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     map: map,
                     title: title
                 });
-                marker.addListener('click', function() {
+                marker.addListener('click', function () {
                     infowindow.open(map, marker);
                 });
             }
@@ -323,14 +339,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }, 'Borivali', contentString10);
 
         };
-        setTimeout(function() {
+        setTimeout(function () {
             initMap();
         }, 100);
         // google map end
         $scope.status = {
             isFirstOpen: true
         };
-        $scope.openList = function() {
+        $scope.openList = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modal/storymonth.html',
@@ -338,7 +354,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 scope: $scope
             });
         };
-        $scope.openStory = function() {
+        $scope.openStory = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modal/success.html',
@@ -346,7 +362,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 scope: $scope
             });
         };
-        $scope.openAppform = function() {
+        $scope.openAppform = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modal/apptemp.html',
@@ -354,7 +370,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 scope: $scope
             });
         };
-        $scope.openIndappeal = function() {
+        $scope.openIndappeal = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modal/indappeal.html',
@@ -362,7 +378,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 scope: $scope
             });
         };
-        $scope.openAppeal = function() {
+        $scope.openAppeal = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modal/appeal.html',
@@ -370,37 +386,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 scope: $scope
             });
         };
-        $scope.open = function() {
+        $scope.open = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: 'views/modal/mapplication.html',
                 controller: 'RtiCtrl',
             });
         };
-        $scope.open1 = function() {
+        $scope.open1 = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: 'views/modal/mfirstappeal.html',
                 controller: 'RtiCtrl',
             });
         };
-        $scope.open2 = function() {
+        $scope.open2 = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: 'views/modal/msecondappeal.html',
                 controller: 'RtiCtrl',
             });
         };
-        $scope.open3 = function() {
+        $scope.open3 = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: 'views/modal/capplication.html',
                 controller: 'RtiCtrl',
             });
         };
-        $scope.open4 = function() {
+        $scope.open4 = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: 'views/modal/cfirstappeal.html',
                 controller: 'RtiCtrl',
             });
         };
-        $scope.open5 = function() {
+        $scope.open5 = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: 'views/modal/csecondappeal.html',
                 controller: 'RtiCtrl',
@@ -408,106 +424,117 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('AboutCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("about");
         $scope.menutitle = NavigationService.makeactive("About Us");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('EventCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('EventCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("event");
         $scope.menutitle = NavigationService.makeactive("Event");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('ManavbloodCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('ManavbloodCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("manavblood");
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = "Manav Blood";
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('BookbankCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('StoryMakerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("storymaker");
+        $scope.menutitle = NavigationService.makeactive("Activity");
+        TemplateService.title = "Story Maker";
+        $scope.navigation = NavigationService.getnav();
+        $scope.changeURL = function (id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+    })
+    .controller('BookbankCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("bookbank");
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = "Book Bank";
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('LectureseriesCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('LectureseriesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("lectureseries");
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = "Lecture Series";
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('FeedhungryCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('FeedhungryCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("feedhungry");
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = "Feed The Hungry";
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('YuvrajmovementCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('YuvrajmovementCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("yuvrajmovement");
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = "Yuvraj Eye Donation Movement";
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('SakshamtaabhiyanCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('SakshamtaabhiyanCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("sakshamtaabhiyan");
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = "Sakshamta Abhiyan";
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    .controller('ContactCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("contact");
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        $scope.changeURL = function(id) {
+        $scope.changeURL = function (id) {
             console.log(id);
             $location.path("" + id);
         };
     })
-    .controller('ActivityCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ActivityCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("activity");
         $scope.menutitle = NavigationService.makeactive("Activity");
@@ -523,7 +550,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('GalleryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('GalleryCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("gallery");
         $scope.menutitle = NavigationService.makeactive("Gallery");
@@ -557,146 +584,146 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('DonateCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("donate");
-    $scope.menutitle = NavigationService.makeactive("Donate");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    .controller('DonateCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("donate");
+        $scope.menutitle = NavigationService.makeactive("Donate");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-    $scope.donateNow = {};
-    $scope.donateNow.tid = new Date().getTime();
+        $scope.donateNow = {};
+        $scope.donateNow.tid = new Date().getTime();
 
-    $scope.donate = function() {
-        var obj = {
-            merchant_id: "88667",
-            order_id: "" + $scope.donateNow.tid,
-            currency: "INR",
-            amount: $scope.donateNow.amt,
-            redirect_url: "http://api.thetmm.org/order/postRes",
-            cancel_url: "http://api.thetmm.org/order/postRes",
-            language: "EN",
-            billing_name: $scope.donateNow.name,
-            billing_tel: $scope.donateNow.mobile,
-            merchant_param1: "web"
-        }
-        var stringObj = JSON.stringify(obj);
-        // var ref = window.open("http://api.thetmm.org/order/postReq?data=" + stringObj, '_blank');
-        window.location.href = "http://api.thetmm.org/order/postReq?data=" + stringObj;
-        // var ref = cordova.InAppBrowser.open("http://api.thetmm.org/order/postReq?data=" + stringObj, 'target=_system', 'location=no');
-        ref.addEventListener('loadstop', function(event) {
-            console.log(event.url);
-            if (event.url == "http://wohlig.co.in/paisoapk/fail.html") {
-                ref.close();
-                var alertPopup = $ionicPopup.alert({
-                    title: 'Donate Now',
-                    template: '<h4 style="text-align:center;">Payment Failed</h4>'
-                });
-                alertPopup.then(function(res) {
-                    alertPopup.close();
-                    $state.go('app.home');
-                });
-            } else if (event.url == "http://wohlig.co.in/paisoapk/success.html") {
-                ref.close();
-                var alertPopup = $ionicPopup.alert({
-                    title: 'Donate Now',
-                    template: '<h4 style="text-align:center;">Payment Successful. Thank You!</h4>'
-                });
-                alertPopup.then(function(res) {
-                    alertPopup.close();
-                    $state.go('app.home');
-                });
+        $scope.donate = function () {
+            var obj = {
+                merchant_id: "88667",
+                order_id: "" + $scope.donateNow.tid,
+                currency: "INR",
+                amount: $scope.donateNow.amt,
+                redirect_url: "http://api.thetmm.org/order/postRes",
+                cancel_url: "http://api.thetmm.org/order/postRes",
+                language: "EN",
+                billing_name: $scope.donateNow.name,
+                billing_tel: $scope.donateNow.mobile,
+                merchant_param1: "web"
             }
+            var stringObj = JSON.stringify(obj);
+            // var ref = window.open("http://api.thetmm.org/order/postReq?data=" + stringObj, '_blank');
+            window.location.href = "http://api.thetmm.org/order/postReq?data=" + stringObj;
+            // var ref = cordova.InAppBrowser.open("http://api.thetmm.org/order/postReq?data=" + stringObj, 'target=_system', 'location=no');
+            ref.addEventListener('loadstop', function (event) {
+                console.log(event.url);
+                if (event.url == "http://wohlig.co.in/paisoapk/fail.html") {
+                    ref.close();
+                    var alertPopup = $ionicPopup.alert({
+                        title: 'Donate Now',
+                        template: '<h4 style="text-align:center;">Payment Failed</h4>'
+                    });
+                    alertPopup.then(function (res) {
+                        alertPopup.close();
+                        $state.go('app.home');
+                    });
+                } else if (event.url == "http://wohlig.co.in/paisoapk/success.html") {
+                    ref.close();
+                    var alertPopup = $ionicPopup.alert({
+                        title: 'Donate Now',
+                        template: '<h4 style="text-align:center;">Payment Successful. Thank You!</h4>'
+                    });
+                    alertPopup.then(function (res) {
+                        alertPopup.close();
+                        $state.go('app.home');
+                    });
+                }
+            });
+        }
+
+    })
+
+    .controller('SuccessCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("success");
+        $scope.menutitle = NavigationService.makeactive("Success");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
+
+    .controller('FailureCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("failure");
+        $scope.menutitle = NavigationService.makeactive("Failure");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.transId = $stateParams.id;
+
+    })
+    .controller('footerctrl', function ($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        $scope.record = [{
+            count: "29079",
+            number: "No of Donors"
+        }, {
+            count: "127391",
+            number: "No of Blood Bottles"
+        }, {
+            count: "89",
+            number: "No of Blood Camp"
+        }];
+        $scope.record1 = [{
+            count: "37",
+            number: "Mobile Eye Collection Centres"
+        }, {
+            count: "250+",
+            number: "Doctor's and Socail Worker"
+        }, {
+            count: "14902",
+            number: "No of Eye Balls Collected"
+        }];
+        $scope.record2 = [{
+            count: "7",
+            number: "Centres"
+        }, {
+            count: "890",
+            number: "In 2016 Students took benefit"
+        }, {
+            count: "35000+",
+            number: "Students Benefited"
+        }];
+        $scope.record3 = [{
+            count: "11",
+            number: "Centres"
+        }, {
+            count: "80+",
+            number: "Professionals"
+        }, {
+            count: "7000+",
+            number: "RTI Applications"
+        }];
+        $scope.record4 = [{
+            count: "4",
+            number: "Hospitals"
+        }, {
+            count: "50+",
+            number: "Social Workers working 365 days"
+        }, {
+            count: "1000",
+            number: "Patient/Relatives take benefit-Daily"
+        }];
+    })
+    .controller('headerctrl', function ($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams, $stateParams, $location, $timeout, $document) {
+            $(window).scrollTop(0);
         });
-    }
+        $scope.subscribe = {};
+        $scope.showThanks = false;
+        $scope.subscribeNow = function () {
+            console.log($scope.subscribe);
+            NavigationService.subscribeNow($scope.subscribe, function (data) {
+                console.log(data);
+                $scope.showThanks = true;
+            });
+        };
 
-})
-
-.controller('SuccessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("success");
-    $scope.menutitle = NavigationService.makeactive("Success");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-
-})
-
-.controller('FailureCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("failure");
-    $scope.menutitle = NavigationService.makeactive("Failure");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-
-    $scope.transId = $stateParams.id;
-
-})
-.controller('footerctrl', function($scope, TemplateService, NavigationService) {
-    $scope.template = TemplateService;
-    $scope.record = [{
-        count: "27972",
-        number: "No of Donors"
-    }, {
-      count: "127391",
-      number: "No of Blood Bottles"
-    },{
-      count: "87",
-      number: "No of Blood Camp"
-    }];
-    $scope.record1 = [{
-        count: "37",
-        number: "Mobile Eye Collection Centres"
-    }, {
-      count: "250+",
-      number: "Doctor's and Socail Worker"
-    },{
-      count: "14902",
-      number: "No of Eye Balls Collected"
-    }];
-    $scope.record2 = [{
-        count: "7",
-        number: "Centres"
-    }, {
-      count: "890",
-      number: "In 2016 Students took benefit"
-    },{
-      count: "35000+",
-      number: "Students Benefited"
-    }];
-    $scope.record3 = [{
-        count: "11",
-        number: "Centres"
-    }, {
-      count: "80+",
-      number: "Professionals"
-    },{
-      count: "7000+",
-      number: "RTI Applications"
-    }];
-    $scope.record4 = [{
-        count: "4",
-        number: "Hospitals"
-    }, {
-      count: "50+",
-      number: "Social Workers working 365 days"
-    },{
-      count: "1000",
-      number: "Patient/Relatives take benefit-Daily"
-    }];
-  })
-.controller('headerctrl', function($scope, TemplateService, NavigationService) {
-    $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, $stateParams, $location, $timeout, $document) {
-        $(window).scrollTop(0);
     });
-    $scope.subscribe = {};
-    $scope.showThanks = false;
-    $scope.subscribeNow = function() {
-        console.log($scope.subscribe);
-        NavigationService.subscribeNow($scope.subscribe, function(data) {
-            console.log(data);
-            $scope.showThanks = true;
-        });
-    };
-
-});
