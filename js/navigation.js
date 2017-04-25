@@ -3,63 +3,66 @@ var navigationservice = angular.module('navigationservice', [])
 
     .factory('NavigationService', function ($http) {
         var navigation = [{
-            name: "About Us",
-            classis: "active",
-            link: "about",
-        }, {
-            name: "Activity",
-            classis: "active",
-            link: "#",
-            subnav: [{
-                    name: "Story Of Makers",
-                    classis: "active",
-                    link: "storymaker"
-                },
-                {
-                    name: "Manav Blood Donation Movement",
-                    classis: "active",
-                    link: "manavblood"
-                },
-                {
-                    name: "Book Bank For Needy Students",
-                    classis: "active",
-                    link: "bookbank"
-                }, {
-                    name: "Lecture Series",
-                    classis: "active",
-                    link: "lectureseries"
-                }, {
-                    name: "Feed The Hungry",
-                    classis: "active",
-                    link: "feedhungry"
-                }, {
-                    name: "Yuvraj Eye Donation Movement",
-                    classis: "active",
-                    link: "yuvrajmovement"
-                }, {
-                    name: "Sakshamta Abhiyan",
-                    classis: "active",
-                    link: "sakshamtaabhiyan"
-                }, {
-                    name: "RTI",
-                    classis: "active",
-                    link: "rti"
-                }
-            ]
-        }, {
-            name: "Gallery",
-            classis: "active",
-            link: "gallery",
-        }, {
-            name: "Event",
-            classis: "active",
-            link: "event",
+                name: "About Us",
+                classis: "active",
+                link: "about",
+            }, {
+                name: "Activity",
+                classis: "active",
+                link: "#",
+                subnav: [{
+                        name: "Story Of Makers",
+                        classis: "active",
+                        link: "storymaker"
+                    },
+                    {
+                        name: "Manav Blood Donation Movement",
+                        classis: "active",
+                        link: "manavblood"
+                    },
+                    {
+                        name: "Book Bank For Needy Students",
+                        classis: "active",
+                        link: "bookbank"
+                    }, {
+                        name: "Lecture Series",
+                        classis: "active",
+                        link: "lectureseries"
+                    }, {
+                        name: "Feed The Hungry",
+                        classis: "active",
+                        link: "feedhungry"
+                    }, {
+                        name: "Yuvraj Eye Donation Movement",
+                        classis: "active",
+                        link: "yuvrajmovement"
+                    }, {
+                        name: "Sakshamta Abhiyan",
+                        classis: "active",
+                        link: "sakshamtaabhiyan"
+                    }, {
+                        name: "RTI",
+                        classis: "active",
+                        link: "rti"
+                    }
+                ]
+            },
+            // {
+            //     name: "Gallery",
+            //     classis: "active",
+            //     link: "gallery",
+            // },
+            {
+                name: "Event",
+                classis: "active",
+                link: "event",
 
-        }, {
-            name: "Contact Us",
-            classis: "active",
-            link: "contact",
-        }];
+            }, {
+                name: "Contact Us",
+                classis: "active",
+                link: "contact",
+            }
+        ];
 
         return {
             getnav: function () {

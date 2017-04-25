@@ -38,11 +38,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
             templateUrl: "views/template.html",
             controller: 'FailureCtrl'
         })
-        .state('gallery', {
-            url: "/gallery",
-            templateUrl: "views/template.html",
-            controller: 'GalleryCtrl'
-        })
+        // .state('gallery', {
+        //     url: "/gallery",
+        //     templateUrl: "views/template.html",
+        //     controller: 'GalleryCtrl'
+        // })
         .state('Activity', {
             url: "/activity",
             templateUrl: "views/template.html",
